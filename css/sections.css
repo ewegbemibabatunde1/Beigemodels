@@ -1,0 +1,811 @@
+/**
+ * BEIGE MODEL MANAGEMENT — EDITORIAL HOMEPAGE SECTIONS
+ */
+
+/* ==========================================================================
+   1. Hero Section
+   ========================================================================== */
+.hero {
+  position: relative;
+  min-height: max(720px, 100svh);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: var(--color-black);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: 
+    linear-gradient(90deg, rgba(16, 16, 16, 0.98) 0%, rgba(16, 16, 16, 0.82) 36%, rgba(16, 16, 16, 0.35) 70%, rgba(16, 16, 16, 0.45) 100%),
+    url("../assets/images/campaigns/lighthill-hero.jpg");
+  background-position: center 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.04);
+  animation: hero-settle 1.8s var(--ease-editorial) both;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(16, 16, 16, 0.8) 0%, transparent 40%),
+              radial-gradient(circle at 80% 50%, transparent 0 25%, rgba(16, 16, 16, 0.25) 70%);
+}
+
+@keyframes hero-settle {
+  from {
+    transform: scale(1.12);
+    opacity: 0.65;
+  }
+  to {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+.hero-inner {
+  width: 100%;
+  padding: 160px var(--page-pad) 90px;
+}
+
+.hero-copy {
+  max-width: 640px;
+}
+
+.hero h1 {
+  margin: 24px 0 22px;
+  max-width: 720px;
+  font-family: var(--font-serif);
+  font-size: var(--text-hero);
+  font-weight: 400;
+  line-height: 0.84;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.hero h1 span {
+  display: block;
+}
+
+.hero-description {
+  max-width: 440px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: var(--text-body);
+  line-height: 1.85;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.hero-index {
+  position: absolute;
+  right: var(--page-pad);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  color: var(--color-white);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+.hero-index .rule {
+  height: 74px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.hero-index button {
+  font-size: 18px;
+  color: var(--color-white);
+  transition: transform var(--duration-fast) ease, color var(--duration-fast) ease;
+}
+
+.hero-index button:hover {
+  transform: translateY(4px);
+  color: var(--color-raspberry);
+}
+
+.hero-bottom {
+  position: absolute;
+  bottom: 28px;
+  left: var(--page-pad);
+  right: var(--page-pad);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+
+/* ==========================================================================
+   2. Talent Strip (Warm Ivory Ground, Women Only)
+   ========================================================================== */
+.talent-strip {
+  display: grid;
+  grid-template-columns: 1.08fr repeat(4, 1fr);
+  min-height: 380px;
+  background-color: var(--color-paper);
+  color: var(--color-black);
+}
+
+.talent-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px clamp(24px, 4vw, 64px);
+}
+
+.talent-intro h2 {
+  margin: 18px 0 12px;
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 4.4vw, 62px);
+  font-weight: 400;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.talent-intro p {
+  max-width: 240px;
+  color: #625d5a;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.talent-card {
+  position: relative;
+  min-height: 380px;
+  overflow: hidden;
+  background-color: var(--color-stone);
+}
+
+.talent-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85);
+  transition: transform 0.8s var(--ease-editorial), filter 0.5s ease;
+}
+
+.talent-card:hover img {
+  transform: scale(1.06);
+  filter: saturate(1.08);
+}
+
+.talent-card::after {
+  content: "";
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(transparent, rgba(16, 16, 16, 0.8));
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.talent-card-meta {
+  position: absolute;
+  z-index: 2;
+  bottom: 22px;
+  left: 22px;
+  right: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.talent-card-name {
+  color: var(--color-white);
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.talent-card-category {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+  margin-top: 6px;
+}
+
+.talent-save-btn {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--color-white);
+  font-size: 14px;
+  transition: background var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.talent-save-btn:hover {
+  background: var(--color-raspberry);
+  border-color: var(--color-raspberry);
+  transform: scale(1.1);
+}
+
+.talent-save-btn[aria-pressed="true"] {
+  background: var(--color-raspberry);
+  border-color: var(--color-raspberry);
+}
+
+
+/* ==========================================================================
+   3. About & Philosophy Section
+   ========================================================================== */
+.about-section {
+  display: grid;
+  grid-template-columns: 0.95fr 1.15fr 0.95fr;
+  min-height: 480px;
+  background-color: var(--color-black-elevated);
+  border-top: 1px solid var(--border-light-subtle);
+}
+
+.about-photo {
+  position: relative;
+  min-height: 460px;
+  overflow: hidden;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter var(--duration-slow) ease, transform var(--duration-slow) var(--ease-editorial);
+}
+
+.about-photo:hover img {
+  filter: grayscale(40%) contrast(1.05);
+  transform: scale(1.03);
+}
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px clamp(28px, 5.5vw, 84px);
+}
+
+.about-copy h2 {
+  margin: 20px 0 18px;
+  font-family: var(--font-serif);
+  font-size: var(--text-h2);
+  font-weight: 400;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.about-copy p {
+  max-width: 460px;
+  color: #bcb7b4;
+  font-size: var(--text-body);
+  line-height: 1.9;
+}
+
+.services-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px clamp(24px, 4vw, 60px);
+  border-left: 1px solid var(--border-light);
+}
+
+.services-panel h3 {
+  margin: 0 0 28px;
+  color: var(--color-raspberry);
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.services-panel ul {
+  list-style: none;
+}
+
+.services-panel li {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border-light-subtle);
+  color: #e8e3df;
+  font-family: var(--font-serif);
+  font-size: 21px;
+  transition: color var(--duration-fast) ease, padding-left var(--duration-fast) ease;
+}
+
+.services-panel li:hover {
+  color: var(--color-fuchsia);
+  padding-left: 8px;
+}
+
+
+/* ==========================================================================
+   4. Manifesto Section
+   ========================================================================== */
+.manifesto {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: 
+    linear-gradient(90deg, rgba(16, 16, 16, 0.95), rgba(16, 16, 16, 0.72)),
+    url("../assets/images/campaigns/dowsk-01.jpg") center 40% / cover no-repeat;
+  padding: 85px var(--page-pad);
+  border-top: 1px solid var(--border-light-subtle);
+  border-bottom: 1px solid var(--border-light-subtle);
+}
+
+.manifesto-inner {
+  max-width: 960px;
+}
+
+.manifesto h2 {
+  margin: 22px 0 18px;
+  font-family: var(--font-serif);
+  font-size: clamp(44px, 6.4vw, 92px);
+  font-weight: 400;
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+.manifesto p {
+  max-width: 560px;
+  color: #c8c2be;
+  font-size: var(--text-body);
+  line-height: 1.9;
+}
+
+
+/* ==========================================================================
+   5. Capabilities & Services Section
+   ========================================================================== */
+.services-section {
+  padding: 110px var(--page-pad) 125px;
+  background-color: var(--color-paper);
+  color: var(--color-black);
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 36px;
+  margin-bottom: 58px;
+}
+
+.section-heading h2 {
+  margin: 18px 0 0;
+  font-family: var(--font-serif);
+  font-size: var(--text-h1);
+  font-weight: 400;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.section-heading p {
+  max-width: 360px;
+  color: #625d5a;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.service-list {
+  border-top: 1px solid var(--color-paper-dark);
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 80px 1.2fr 1fr 40px;
+  gap: 28px;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--color-paper-dark);
+  color: var(--color-black);
+  transition: padding-left var(--duration-medium) var(--ease-editorial), color var(--duration-fast) ease;
+}
+
+.service-row:hover {
+  padding-left: 18px;
+  color: var(--color-raspberry);
+}
+
+.service-number {
+  color: var(--color-raspberry);
+  font-family: var(--font-serif);
+  font-size: 26px;
+}
+
+.service-row h3 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.service-row p {
+  margin: 0;
+  color: #716a65;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.service-arrow {
+  justify-self: end;
+  font-size: 24px;
+}
+
+
+/* ==========================================================================
+   6. Conversion Cards (Dual Immersion)
+   ========================================================================== */
+.conversion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.conversion-card {
+  position: relative;
+  min-height: 440px;
+  display: flex;
+  align-items: flex-end;
+  padding: 56px clamp(28px, 5.5vw, 80px);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.conversion-card::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+.conversion-card:hover::before {
+  transform: scale(1.05);
+}
+
+.conversion-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(16, 16, 16, 0.92) 0%, rgba(16, 16, 16, 0.25) 100%);
+}
+
+.conversion-card.booking::before {
+  background-image: url("../assets/images/models/ada-editorial-01.jpg");
+  background-position: center 25%;
+}
+
+.conversion-card.recruitment::before {
+  background-image: url("../assets/images/models/belle-beauty-01.jpg");
+  background-position: center 20%;
+}
+
+.conversion-content {
+  max-width: 460px;
+}
+
+.conversion-content h2 {
+  margin: 16px 0 14px;
+  font-family: var(--font-serif);
+  font-size: var(--text-h2);
+  font-weight: 400;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.conversion-content p {
+  max-width: 360px;
+  margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+
+/* ==========================================================================
+   7. Real Campaigns & Editorial Moments
+   ========================================================================== */
+.social-section {
+  padding: 95px var(--page-pad);
+  background-color: var(--color-black-elevated);
+}
+
+.social-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.social-top h2 {
+  margin: 14px 0 0;
+  font-family: var(--font-serif);
+  font-size: var(--text-h2);
+  font-weight: 400;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.social-grid a {
+  position: relative;
+  aspect-ratio: 1 / 1.15;
+  overflow: hidden;
+  background-color: var(--color-black-card);
+}
+
+.social-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-editorial);
+}
+
+.social-grid a:hover img {
+  transform: scale(1.08);
+}
+
+.social-credit-label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgba(16, 16, 16, 0.82);
+  backdrop-filter: blur(4px);
+  padding: 6px 10px;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-grid a:hover .social-credit-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==========================================================================
+   8. Luxury Footer
+   ========================================================================== */
+footer {
+  padding: 70px var(--page-pad) 30px;
+  background-color: var(--color-black-deep);
+  border-top: 1px solid var(--border-light-subtle);
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  gap: 44px;
+  padding-bottom: 54px;
+}
+
+.footer-brand p {
+  max-width: 300px;
+  margin-top: 24px;
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.footer-col h4 {
+  margin: 6px 0 22px;
+  color: var(--color-raspberry);
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer-col a,
+.footer-col p {
+  display: block;
+  margin: 12px 0;
+  color: #aaa39f;
+  font-size: 12px;
+  transition: color var(--duration-fast) ease;
+}
+
+.footer-col a:hover {
+  color: var(--color-white);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light-subtle);
+  color: #77716d;
+  font-size: 10px;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-legal a:hover {
+  color: var(--color-white);
+}
+
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 1100px) {
+  .talent-strip {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .talent-intro {
+    min-height: 320px;
+  }
+  .talent-card {
+    min-height: 320px;
+  }
+  .talent-card:nth-of-type(4) {
+    display: none;
+  }
+  .about-section {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+  .services-panel {
+    grid-column: 1 / -1;
+    border-left: 0;
+    border-top: 1px solid var(--border-light);
+  }
+  .services-panel ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 36px;
+  }
+}
+
+@media (max-width: 820px) {
+  .hero {
+    min-height: 720px;
+    align-items: flex-end;
+  }
+  .hero-inner {
+    padding-top: 180px;
+    padding-bottom: 120px;
+  }
+  .hero-index {
+    top: 130px;
+    right: var(--page-pad);
+    transform: none;
+    flex-direction: row;
+    gap: 12px;
+  }
+  .hero-index .rule {
+    height: 1px;
+    width: 36px;
+  }
+  .talent-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+  .talent-intro {
+    grid-column: 1 / -1;
+    min-height: 240px;
+  }
+  .talent-card {
+    min-height: 280px;
+  }
+  .talent-card:nth-of-type(4) {
+    display: block;
+  }
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+  .about-photo {
+    min-height: 360px;
+    max-height: 420px;
+  }
+  .about-copy {
+    padding: 60px var(--page-pad);
+  }
+  .services-panel {
+    padding: 48px var(--page-pad);
+  }
+  .services-panel ul {
+    grid-template-columns: 1fr;
+  }
+  .section-heading {
+    display: block;
+    margin-bottom: 38px;
+  }
+  .section-heading p {
+    margin-top: 18px;
+  }
+  .service-row {
+    grid-template-columns: 40px 1fr 28px;
+    gap: 14px;
+    padding: 22px 0;
+  }
+  .service-row h3 {
+    font-size: 24px;
+  }
+  .service-row p {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+  .service-arrow {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+  .conversion {
+    grid-template-columns: 1fr;
+  }
+  .conversion-card {
+    min-height: 380px;
+  }
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .social-grid a:last-child {
+    display: none;
+  }
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 24px;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .talent-strip {
+    grid-template-columns: 1fr;
+  }
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,69 @@
+/**
+ * BEIGE MODEL MANAGEMENT — DESIGN TOKENS
+ * Brand Concept: The Art of Representation
+ * Palette: Midnight Black (#101010), Raspberry Rose (#C03050), Ivory (#F7F4F1), Paper (#EEE9E4), Warm Stone (#B7A99B)
+ */
+
+:root {
+  /* Surfaces & Dark Tones */
+  --color-black: #101010;
+  --color-black-elevated: #171717;
+  --color-black-card: #1f1d1d;
+  --color-black-deep: #0a0a0a;
+
+  /* Paper & Light Tones */
+  --color-ivory: #f7f4f1;
+  --color-paper: #eee9e4;
+  --color-paper-dark: #dfd9d2;
+  --color-stone: #b7a99b;
+  --color-muted: #8f8985;
+  --color-white: #ffffff;
+
+  /* Brand Accents */
+  --color-raspberry: #c03050;
+  --color-fuchsia: #e02070;
+  --color-raspberry-subtle: rgba(192, 48, 80, 0.14);
+  --color-raspberry-glow: rgba(192, 48, 80, 0.35);
+
+  /* Lines & Borders */
+  --border-light: rgba(255, 255, 255, 0.14);
+  --border-light-subtle: rgba(255, 255, 255, 0.08);
+  --border-dark: rgba(16, 16, 16, 0.14);
+  --border-dark-subtle: rgba(16, 16, 16, 0.08);
+  --border-accent: rgba(192, 48, 80, 0.5);
+
+  /* Typography Stacks */
+  --font-serif: "Italiana", "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Typography Scales */
+  --text-hero: clamp(54px, 8.8vw, 130px);
+  --text-h1: clamp(40px, 5.8vw, 76px);
+  --text-h2: clamp(30px, 4.2vw, 54px);
+  --text-h3: clamp(20px, 2.6vw, 32px);
+  --text-body: 13.5px;
+  --text-body-sm: 11.5px;
+  --text-eyebrow: 10px;
+  --text-btn: 9.5px;
+
+  /* Spacing Scale */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 14px;
+  --space-md: 22px;
+  --space-lg: 36px;
+  --space-xl: 56px;
+  --space-2xl: 84px;
+  --space-3xl: 120px;
+  --page-pad: clamp(20px, 5.2vw, 84px);
+
+  /* Timing & Motion */
+  --ease-editorial: cubic-bezier(0.19, 1, 0.22, 1);
+  --duration-fast: 220ms;
+  --duration-medium: 400ms;
+  --duration-slow: 750ms;
+
+  /* Elevation Shadows */
+  --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 14px 40px rgba(192, 48, 80, 0.22);
+}

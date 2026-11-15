@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Beige Model Management — discovering distinctive women faces, developing exceptional talent, and creating meaningful editorial representation in Africa and worldwide.">
+  <meta property="og:title" content="BEIGE Model Management — The Art of Representation">
+  <meta property="og:description" content="Discovering distinctive faces. Developing exceptional talent. Creating meaningful representation.">
+  <meta property="og:type" content="website">
+  <title>BEIGE Model Management — The Art of Representation</title>
+
+  <!-- Google Web Fonts: Italiana (Editorial Serif) & DM Sans (Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Italiana&display=swap" rel="stylesheet">
+
+  <!-- Modular Design System Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+  <!-- Ambient Cursor Glow for Desktop Fine Pointers -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Global Site Header -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Beige Model Management — Return to Homepage">
+      <div class="brand-emblem-wrap">
+        <img src="assets/images/logo/beige-models-art.jpg" alt="Beige Models Logo" class="brand-emblem" width="40" height="40">
+      </div>
+      <div class="brand-name">
+        BEIGE
+        <small>MODEL MANAGEMENT</small>
+      </div>
+    </a>
+
+    <!-- Primary Navigation Links -->
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a>
+      <a href="#models">Models</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Booking</a>
+      <a href="#recruitment">Recruitment</a>
+      <a href="#campaigns">Campaigns</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Header Actions: Shortlist Trigger & Booking CTA -->
+    <div class="header-right">
+      <button class="shortlist-trigger" id="shortlistOpen" type="button" aria-label="View talent shortlist">
+        <span>Shortlist</span>
+        <span class="shortlist-count-badge" id="headerShortlistCount">0</span>
+      </button>
+      <a class="btn pill header-cta" href="#booking">Book a model <span class="arrow">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open mobile navigation menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- 1. Hero Section -->
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy reveal visible">
+          <span class="eyebrow">Beige Model Management</span>
+          <h1>
+            <span>Beauty has</span>
+            <span>no <i class="accent">single</i></span>
+            <span>definition.</span>
+          </h1>
+          <p class="hero-description">
+            Discovering distinctive women faces. Developing exceptional talent. Creating meaningful representation across editorial, runway, and global commercial campaigns.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#models">Discover our models <span class="arrow">→</span></a>
+            <a class="btn outline" href="#recruitment">Become a model</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-index" aria-hidden="true">
+        <span>01 / 03</span>
+        <span class="rule"></span>
+        <button id="heroNext" type="button" aria-label="Scroll to featured models">⌄</button>
+      </div>
+
+      <div class="hero-bottom">
+        <span>The Art of Representation · Lagos, Nigeria</span>
+        <div class="scroll-cue">Scroll to explore</div>
+      </div>
+    </section>
+
+    <!-- 2. Talent Strip (Warm Ivory Ground, Women Only) -->
+    <section class="talent-strip" id="models" aria-label="Featured Talent Roster">
+      <div class="talent-intro reveal">
+        <span class="eyebrow">The Beige Roster</span>
+        <h2>The<br>Beige<br>Talent</h2>
+        <p>A distinctive roster of women redefining luxury fashion and beauty across Africa and internationally.</p>
+        <a class="text-link" href="#models">View all models <span class="arrow">→</span></a>
+      </div>
+
+      <!-- Model Card 1: Ada -->
+      <article class="talent-card tilt reveal" data-model="ada">
+        <img src="assets/images/models/ada-editorial-01.jpg" alt="Beige Model Ada in high fashion editorial campaign" loading="lazy" width="480" height="600">
+        <div class="talent-card-meta">
+          <div>
+            <h3 class="talent-card-name">Ada</h3>
+            <span class="talent-card-category">Commercial · Beauty</span>
+          </div>
+          <button class="talent-save-btn" type="button" data-shortlist-btn data-model-id="ada" aria-label="Add Ada to shortlist" aria-pressed="false">＋</button>
+        </div>
+      </article>
+
+      <!-- Model Card 2: Aisha -->
+      <article class="talent-card tilt reveal" data-model="aisha">
+        <img src="assets/images/models/aisha-editorial-01.jpg" alt="Beige Model Aisha in luxury glamour portrait" loading="lazy" width="480" height="600">
+        <div class="talent-card-meta">
+          <div>
+            <h3 class="talent-card-name">Aisha</h3>
+            <span class="talent-card-category">Editorial · Glamour</span>
+          </div>
+          <button class="talent-save-btn" type="button" data-shortlist-btn data-model-id="aisha" aria-label="Add Aisha to shortlist" aria-pressed="false">＋</button>
+        </div>
+      </article>
+
+      <!-- Model Card 3: Anastasia -->
+      <article class="talent-card tilt reveal" data-model="anastasia">
+        <img src="assets/images/models/anastasia-editorial-01.jpg" alt="Beige Model Anastasia in high editorial styling" loading="lazy" width="480" height="600">
+        <div class="talent-card-meta">
+          <div>
+            <h3 class="talent-card-name">Anastasia</h3>
+            <span class="talent-card-category">Runway · High Fashion</span>
+          </div>
+          <button class="talent-save-btn" type="button" data-shortlist-btn data-model-id="anastasia" aria-label="Add Anastasia to shortlist" aria-pressed="false">＋</button>
+        </div>
+      </article>
+
+      <!-- Model Card 4: Belle -->
+      <article class="talent-card tilt reveal" data-model="belle">
+        <img src="assets/images/models/belle-beauty-01.jpg" alt="Beige Model Belle in beauty editorial" loading="lazy" width="480" height="600">
+        <div class="talent-card-meta">
+          <div>
+            <h3 class="talent-card-name">Belle</h3>
+            <span class="talent-card-category">Beauty · Editorial</span>
+          </div>
+          <button class="talent-save-btn" type="button" data-shortlist-btn data-model-id="belle" aria-label="Add Belle to shortlist" aria-pressed="false">＋</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- 3. About & Philosophy Section -->
+    <section class="about-section" id="about" aria-label="Agency Philosophy">
+      <div class="about-photo reveal">
+        <img src="assets/images/models/debby-beauty-01.jpg" alt="Beige Model Debby in editorial studio portrait" loading="lazy" width="600" height="800">
+      </div>
+      <div class="about-copy reveal">
+        <span class="eyebrow">About Beige</span>
+        <h2>The art of<br><span class="accent">representation.</span></h2>
+        <p>
+          Beige Model Management is built around distinctive talent, thoughtful representation, and a belief in the power of individual identity. We connect exceptional women faces with meaningful creative opportunities across fashion, editorial, and commercial worlds.
+        </p>
+        <div style="margin-top: 32px;">
+          <a class="btn outline" href="#services">Discover our capabilities <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="services-panel reveal">
+        <h3>Agency Practice</h3>
+        <ul>
+          <li>Model Management</li>
+          <li>Talent Booking</li>
+          <li>Commercial & Editorial Casting</li>
+          <li>Model Development</li>
+          <li>Runway Direction</li>
+          <li>Campaign Production</li>
+          <li>International Placement</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. Manifesto Section -->
+    <section class="manifesto" aria-label="Agency Manifesto">
+      <div class="manifesto-inner reveal">
+        <span class="eyebrow">Our Point of View</span>
+        <h2>Distinctive faces.<br><span class="accent">Unmistakable presence.</span></h2>
+        <p>
+          We believe great representation begins with seeing each model as an individual. Our mission is to discover authentic potential, nurture sustainable professional careers, and curate inspiring partnerships with leading international brands.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. Agency Capabilities & Services -->
+    <section class="services-section" id="services" aria-label="Agency Services">
+      <div class="section-heading reveal">
+        <div>
+          <span class="eyebrow">Agency Capabilities</span>
+          <h2>Representation<br>& Production.</h2>
+        </div>
+        <p>From talent discovery and portfolio direction to commercial campaign delivery, explore how Beige supports creative visionaries.</p>
+      </div>
+      <div class="service-list">
+        <div class="service-row reveal">
+          <span class="service-number">01</span>
+          <h3>Model Management</h3>
+          <p>Long-term representation, holistic career guidance, and thoughtful professional development.</p>
+          <a class="service-arrow" href="#booking" aria-label="Enquire about Model Management">↗</a>
+        </div>
+        <div class="service-row reveal">
+          <span class="service-number">02</span>
+          <h3>Commercial & Editorial Casting</h3>
+          <p>Carefully curated casting for major advertising campaigns, editorials, lookbooks, and high fashion stories.</p>
+          <a class="service-arrow" href="#booking" aria-label="Enquire about Commercial & Editorial Casting">↗</a>
+        </div>
+        <div class="service-row reveal">
+          <span class="service-number">03</span>
+          <h3>Runway Direction</h3>
+          <p>Runway coordination, choreography, and premier talent support for international fashion weeks and designer showcases.</p>
+          <a class="service-arrow" href="#booking" aria-label="Enquire about Runway Direction">↗</a>
+        </div>
+        <div class="service-row reveal">
+          <span class="service-number">04</span>
+          <h3>Model Development</h3>
+          <p>Rigorous portfolio curation, movement coaching, and professional etiquette for emerging talent.</p>
+          <a class="service-arrow" href="#recruitment" aria-label="Enquire about Model Development">↗</a>
+        </div>
+        <div class="service-row reveal">
+          <span class="service-number">05</span>
+          <h3>Campaign Production</h3>
+          <p>On-set talent coordination and production liaison for fashion houses, beauty brands, and production agencies.</p>
+          <a class="service-arrow" href="#booking" aria-label="Enquire about Campaign Production">↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Conversion Cards (Dual Immersion) -->
+    <section class="conversion" id="opportunities" aria-label="Engagement Pathways">
+      <article class="conversion-card booking" id="booking">
+        <div class="conversion-content reveal">
+          <span class="eyebrow">For Brands & Production</span>
+          <h2>Book Beige<br>Talent.</h2>
+          <p>Secure the perfect talent for your upcoming campaign, editorial story, runway presentation, or commercial production.</p>
+          <a class="btn" href="mailto:hello@beigemodel.org?subject=Talent%20Booking%20Enquiry">Start a booking enquiry <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="conversion-card recruitment" id="recruitment">
+        <div class="conversion-content reveal">
+          <span class="eyebrow">Talent Scouting</span>
+          <h2>Your Story.<br>Your Presence.</h2>
+          <p>We are constantly seeking distinctive women faces with confidence and individuality. Introduce yourself to our scouting team.</p>
+          <a class="btn outline" href="mailto:hello@beigemodel.org?subject=Model%20Application">Explore becoming a model <span class="arrow">→</span></a>
+        </div>
+      </article>
+    </section>
+
+    <!-- 7. Real Campaigns & Editorial Moments -->
+    <section class="social-section" id="campaigns" aria-label="Campaign Journal">
+      <div class="social-top reveal">
+        <div>
+          <span class="eyebrow">Editorial Moments</span>
+          <h2>Campaign Journal.</h2>
+        </div>
+        <a class="text-link" href="https://www.instagram.com/beigemodels/" target="_blank" rel="noopener noreferrer">
+          Follow @beigemodels <span class="arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="social-grid reveal">
+        <a href="https://www.instagram.com/beigemodels/" target="_blank" rel="noopener noreferrer" aria-label="View Maison Avadote campaign">
+          <img src="assets/images/campaigns/maison-avadote-01.jpg" alt="Beige Models for Maison Avadote" loading="lazy" width="400" height="460">
+          <span class="social-credit-label">Maison Avadote</span>
+        </a>
+        <a href="https://www.instagram.com/beigemodels/" target="_blank" rel="noopener noreferrer" aria-label="View Lighthill Photography campaign">
+          <img src="assets/images/campaigns/lighthill-01.jpg" alt="Beige Models by Lighthill Photography" loading="lazy" width="400" height="460">
+          <span class="social-credit-label">Lighthill Photo</span>
+        </a>
+        <a href="https://www.instagram.com/beigemodels/" target="_blank" rel="noopener noreferrer" aria-label="View Dowsk Photography campaign">
+          <img src="assets/images/campaigns/dowsk-02.jpg" alt="Beige Models by Dowsk Photography" loading="lazy" width="400" height="460">
+          <span class="social-credit-label">Dowsk Studio</span>
+        </a>
+        <a href="https://www.instagram.com/beigemodels/" target="_blank" rel="noopener noreferrer" aria-label="View Adeoge MUA campaign">
+          <img src="assets/images/campaigns/adeoge-01.jpg" alt="Beige Models editorial for Adeoge MUA" loading="lazy" width="400" height="460">
+          <span class="social-credit-label">Adeoge Glam</span>
+        </a>
+        <a href="https://www.instagram.com/beigemodels/" target="_blank" rel="noopener noreferrer" aria-label="View Glam Drop campaign">
+          <img src="assets/images/campaigns/glamdrop-01.jpg" alt="Beige Models editorial for Glam Drop" loading="lazy" width="400" height="460">
+          <span class="social-credit-label">Glam Drop</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Talent Shortlist Dialog -->
+  <dialog class="shortlist-dialog" id="shortlistDialog" aria-labelledby="shortlistDialogTitle">
+    <div class="dialog-head">
+      <h2 id="shortlistDialogTitle">Your Talent Shortlist</h2>
+      <button class="dialog-close" id="shortlistClose" type="button" aria-label="Close talent shortlist">×</button>
+    </div>
+    <div class="shortlist-items" id="shortlistItems">
+      <!-- Injected dynamically by shortlist.js -->
+    </div>
+    <div class="shortlist-footer">
+      <button class="btn outline pill" id="clearShortlist" type="button">Clear all</button>
+      <a class="btn pill" href="#booking" id="shortlistBooking">Proceed to booking <span class="arrow">→</span></a>
+    </div>
+  </dialog>
+
+  <!-- Floating Verified WhatsApp Business Action -->
+  <a class="whatsapp-float" id="whatsappFloat" href="#" target="_blank" rel="noopener noreferrer" aria-label="Chat directly with Beige Model Management on WhatsApp">
+    <span class="whatsapp-dot" aria-hidden="true"></span>
+    <span>WhatsApp Beige</span>
+  </a>
+
+  <!-- Luxury Agency Footer -->
+  <footer id="contact">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="#home" aria-label="Beige Model Management">
+          <div class="brand-emblem-wrap">
+            <img src="assets/images/logo/beige-models-art.jpg" alt="Beige Models Emblem" class="brand-emblem" width="40" height="40">
+          </div>
+          <div class="brand-name">
+            BEIGE
+            <small>MODEL MANAGEMENT</small>
+          </div>
+        </a>
+        <p>
+          Discovering distinctive women faces. Developing exceptional talent. Creating meaningful representation across Africa and global fashion markets.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#home">Home</a>
+        <a href="#models">Models Roster</a>
+        <a href="#about">About Agency</a>
+        <a href="#services">Capabilities</a>
+        <a href="#campaigns">Editorial Journal</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Opportunities</h4>
+        <a href="#booking">Book Talent</a>
+        <a href="#recruitment">Become a Model</a>
+        <a href="https://www.instagram.com/beigemodels/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Agency Headquarters</h4>
+        <p>Lagos, Nigeria</p>
+        <a href="mailto:hello@beigemodel.org">hello@beigemodel.org</a>
+        <div style="margin-top: 18px;">
+          <a class="btn dark pill" href="mailto:hello@beigemodel.org?subject=Agency%20Inquiry">Contact Agency <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> Beige Model Management. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#contact">Privacy Policy</a>
+        <a href="#contact">Terms & Conditions</a>
+        <a href="#contact">Cookie Policy</a>
+      </div>
+      <span class="serif" style="color: var(--color-raspberry); font-size: 15px;">The Art of Representation.</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
