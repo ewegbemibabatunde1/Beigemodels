@@ -38,94 +38,131 @@
 </div>
 </header>
 <main>
-<section class="roster-hero">
-<span class="eyebrow">The Beige Roster · Women Represented</span>
-<h1>Distinctive<br/><i class="accent">Presence.</i></h1>
-<p>
+    <section class="roster-hero">
+      <span class="eyebrow">The Beige Roster · Women Represented</span>
+      <h1>Distinctive<br/><i class="accent">Presence.</i></h1>
+      <p>
         Explore the elite roster of women represented by Beige Model Management across commercial, beauty, editorial,
         and runway campaigns worldwide. Select any portfolio to view high-resolution editorial cards and measurements.
       </p>
-</section>
-<!-- Model Directory Grid -->
-<section aria-label="Model Portfolios" class="roster-grid">
-<!-- Ada -->
-<a aria-label="View Ada's portfolio" class="roster-card" href="ada/index.html">
-<img alt="Ada — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/ada-editorial-01.jpg" width="480"/>
-<div class="roster-card-meta">
-<div>
-<h2>Ada</h2>
-<p>Commercial · Beauty · Editorial</p>
-</div>
-<span aria-hidden="true">↗</span>
-</div>
-</a>
-<!-- Aisha -->
-<a aria-label="View Aisha's portfolio" class="roster-card" href="aisha/index.html">
-<img alt="Aisha — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/aisha-editorial-01.jpg" width="480"/>
-<div class="roster-card-meta">
-<div>
-<h2>Aisha</h2>
-<p>Editorial · High Glamour · Beauty</p>
-</div>
-<span aria-hidden="true">↗</span>
-</div>
-</a>
-<!-- Anastasia -->
-<a aria-label="View Anastasia's portfolio" class="roster-card" href="anastasia/index.html">
-<img alt="Anastasia — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/anastasia-editorial-01.jpg" width="480"/>
-<div class="roster-card-meta">
-<div>
-<h2>Anastasia</h2>
-<p>Runway · Editorial</p>
-</div>
-<span aria-hidden="true">↗</span>
-</div>
-</a>
-<!-- Becky -->
-<a aria-label="View Becky's portfolio" class="roster-card" href="becky/index.html">
-<img alt="Becky — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/becky-commercial-01.jpg" width="480"/>
-<div class="roster-card-meta">
-<div>
-<h2>Becky</h2>
-<p>Commercial · Beauty</p>
-</div>
-<span aria-hidden="true">↗</span>
-</div>
-</a>
-<!-- Belle -->
-<a aria-label="View Belle's portfolio" class="roster-card" href="belle/index.html">
-<img alt="Belle — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/belle-beauty-01.jpg" width="480"/>
-<div class="roster-card-meta">
-<div>
-<h2>Belle</h2>
-<p>Beauty · Editorial</p>
-</div>
-<span aria-hidden="true">↗</span>
-</div>
-</a>
-<!-- Debby -->
-<a aria-label="View Debby's portfolio" class="roster-card" href="debby/index.html">
-<img alt="Debby — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/debby-beauty-01.jpg" width="480"/>
-<div class="roster-card-meta">
-<div>
-<h2>Debby</h2>
-<p>Commercial · Bridal Beauty</p>
-</div>
-<span aria-hidden="true">↗</span>
-</div>
-</a>
-<!-- Ruth -->
-<a aria-label="View Ruth's portfolio" class="roster-card" href="ruth/index.html">
-<img alt="Ruth — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/ruth-beauty-01.jpg" width="480"/>
-<div class="roster-card-meta">
-<div>
-<h2>Ruth</h2>
-<p>Commercial Hair · Beauty</p>
-</div>
-<span aria-hidden="true">↗</span>
-</div>
-</a>
-</section>
+    </section>
+
+    <!-- Model Directory Filter & Search Controls -->
+    <div class="roster-controls" role="search" aria-label="Filter and search represented models">
+      <div class="roster-filter-tabs" role="tablist" aria-label="Model divisions">
+        <button type="button" class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Talent (7)</button>
+        <button type="button" class="filter-tab" data-filter="editorial" role="tab" aria-selected="false">Editorial</button>
+        <button type="button" class="filter-tab" data-filter="commercial" role="tab" aria-selected="false">Commercial</button>
+        <button type="button" class="filter-tab" data-filter="beauty" role="tab" aria-selected="false">Beauty</button>
+        <button type="button" class="filter-tab" data-filter="runway" role="tab" aria-selected="false">Runway</button>
+        <button type="button" class="filter-tab" data-filter="new-faces" role="tab" aria-selected="false">New Faces</button>
+      </div>
+
+      <div class="roster-search-wrap">
+        <span class="roster-search-icon" aria-hidden="true">🔍</span>
+        <input type="search" id="modelSearchInput" class="roster-search-input" placeholder="Search by model name or category..." aria-label="Search models">
+      </div>
+    </div>
+
+    <!-- Active Count Status Bar -->
+    <div class="roster-status-bar" aria-live="polite">
+      <span>Showing <strong id="modelVisibleCount">7</strong> of 7 Represented Women Models</span>
+      <span>Direct Agency Representation</span>
+    </div>
+
+    <!-- Empty Search State -->
+    <div id="rosterEmptyState" class="roster-empty-state">
+      <h3>No Models Found</h3>
+      <p>No represented talent matches your search criteria. Try a different filter or reach out to our casting team for custom talent options.</p>
+      <button class="btn outline-dark" id="resetRosterBtn" type="button">Reset All Filters <span class="arrow">↺</span></button>
+    </div>
+
+    <!-- Model Directory Grid -->
+    <section aria-label="Model Portfolios" class="roster-grid">
+      <!-- Ada -->
+      <a aria-label="View Ada's portfolio" class="roster-card" href="ada/index.html" data-name="ada" data-category="commercial beauty editorial">
+        <img alt="Ada — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/ada-editorial-01.jpg" width="480"/>
+        <div class="roster-card-meta">
+          <div>
+            <h2>Ada</h2>
+            <p>Commercial · Beauty · Editorial</p>
+          </div>
+          <span aria-hidden="true">↗</span>
+        </div>
+      </a>
+
+      <!-- Aisha -->
+      <a aria-label="View Aisha's portfolio" class="roster-card" href="aisha/index.html" data-name="aisha" data-category="editorial glamour beauty runway">
+        <img alt="Aisha — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/aisha-editorial-01.jpg" width="480"/>
+        <div class="roster-card-meta">
+          <div>
+            <h2>Aisha</h2>
+            <p>Editorial · High Glamour · Runway</p>
+          </div>
+          <span aria-hidden="true">↗</span>
+        </div>
+      </a>
+
+      <!-- Anastasia -->
+      <a aria-label="View Anastasia's portfolio" class="roster-card" href="anastasia/index.html" data-name="anastasia" data-category="runway editorial">
+        <img alt="Anastasia — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/anastasia-editorial-01.jpg" width="480"/>
+        <div class="roster-card-meta">
+          <div>
+            <h2>Anastasia</h2>
+            <p>Runway · Editorial</p>
+          </div>
+          <span aria-hidden="true">↗</span>
+        </div>
+      </a>
+
+      <!-- Becky -->
+      <a aria-label="View Becky's portfolio" class="roster-card" href="becky/index.html" data-name="becky" data-category="commercial beauty">
+        <img alt="Becky — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/becky-commercial-01.jpg" width="480"/>
+        <div class="roster-card-meta">
+          <div>
+            <h2>Becky</h2>
+            <p>Commercial · Beauty</p>
+          </div>
+          <span aria-hidden="true">↗</span>
+        </div>
+      </a>
+
+      <!-- Belle -->
+      <a aria-label="View Belle's portfolio" class="roster-card" href="belle/index.html" data-name="belle" data-category="beauty editorial new-faces">
+        <img alt="Belle — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/belle-beauty-01.jpg" width="480"/>
+        <div class="roster-card-meta">
+          <div>
+            <h2>Belle</h2>
+            <p>Beauty · Editorial · New Face</p>
+          </div>
+          <span aria-hidden="true">↗</span>
+        </div>
+      </a>
+
+      <!-- Debby -->
+      <a aria-label="View Debby's portfolio" class="roster-card" href="debby/index.html" data-name="debby" data-category="commercial beauty">
+        <img alt="Debby — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/debby-beauty-01.jpg" width="480"/>
+        <div class="roster-card-meta">
+          <div>
+            <h2>Debby</h2>
+            <p>Commercial · Bridal Beauty</p>
+          </div>
+          <span aria-hidden="true">↗</span>
+        </div>
+      </a>
+
+      <!-- Ruth -->
+      <a aria-label="View Ruth's portfolio" class="roster-card" href="ruth/index.html" data-name="ruth" data-category="commercial beauty new-faces">
+        <img alt="Ruth — Beige Model Management" height="600" loading="lazy" src="../assets/images/models/ruth-beauty-01.jpg" width="480"/>
+        <div class="roster-card-meta">
+          <div>
+            <h2>Ruth</h2>
+            <p>Commercial Hair · Beauty · New Face</p>
+          </div>
+          <span aria-hidden="true">↗</span>
+        </div>
+      </a>
+    </section>
 <!-- Bottom Roster Call to Action -->
 <section class="profile-bottom">
 <div>
@@ -152,7 +189,7 @@
 </div>
 </a>
 <p>
-          Discovering distinctive faces. Nurturing international presence. Defining contemporary African elegance on the
+          Discovering distinctive female talent. Developing exceptional talent. Creating meaningful representation across Africa and global fashion markets.
           global fashion stage.
         </p>
 </div>
@@ -192,6 +229,7 @@
 <span aria-hidden="true" class="whatsapp-dot"></span>
 <span>WhatsApp Beige</span>
 </a>
-<script src="../js/site-config.js"></script>
+  <script src="../js/site-config.js"></script>
+  <script src="../js/roster.js"></script>
 </body>
 </html>
