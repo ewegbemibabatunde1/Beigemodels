@@ -16,7 +16,7 @@
 | **Phase 1** | Audit, Design System & Creative Foundation | **REFINED & SIGNED OFF** | Full-screen Immersive Hero with 5-slide background carousel, Cormorant Garamond descriptions, Minimalist Logo Header, Direct Booking Engine |
 | **Phase 2** | Complete Website Structure & Routes | **FOUNDATION IMPLEMENTED — QA REQUIRED** | Homepage, roster, seven profile routes, About, Services, Contact and legal notice added |
 | **Phase 3** | Women's Model Discovery Platform | **PROFILE FOUNDATION ADDED — EXPANSION PENDING** | Seven individual profile pages and roster index added; content approval and profile enrichment remain |
-| **Phase 4** | Booking, Applications & WhatsApp | **WHATSAPP HAND-OFF IMPLEMENTED — CONFIGURATION REQUIRED** | No verified agency WhatsApp number supplied yet; model application workflow remains to be completed |
+| **Phase 4** | Booking, Applications & WhatsApp | **WHATSAPP LIVE (`09077178197`) & BOOKING ACTIVE** | Agency WhatsApp line 09077178197 (+234 907 717 8197) configured and live across site, booking engine, floating action, and direct enquiry |
 | **Phase 5** | Immersive Editorial Experience & Motion | Pending | Scheduled for Phase 5 |
 | **Phase 6** | SEO, Analytics & Conversion Optimization | Pending | Scheduled for Phase 6 |
 | **Phase 7** | Final QA & Release Readiness | Pending | Scheduled for Phase 7 |
