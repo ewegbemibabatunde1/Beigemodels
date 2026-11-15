@@ -55,94 +55,195 @@
 <div class="editorial-form-wrap" id="bookingFormWrap">
 <span class="eyebrow" style="color: var(--color-raspberry);">Client Brief Builder</span>
 <h3>Request Model Availability</h3>
-<p class="form-subtitle">Complete this brief to initiate an official booking request with Beige Model Management.</p>
-<form id="commercialBookingForm" onsubmit="handleCommercialBooking(event)">
-<div class="form-grid-2">
-<div class="form-field">
-<label for="clientCompany">Brand / Production Company *</label>
-<input id="clientCompany" placeholder="e.g. Vogue Africa, MAC, Studio X" required="" type="text"/>
-</div>
-<div class="form-field">
-<label for="clientName">Contact Person Name *</label>
-<input id="clientName" placeholder="e.g. Sarah Mensah" required="" type="text"/>
-</div>
-</div>
-<div class="form-grid-2">
-<div class="form-field">
-<label for="clientEmail">Corporate Email *</label>
-<input id="clientEmail" placeholder="e.g. casting@brand.com" required="" type="email"/>
-</div>
-<div class="form-field">
-<label for="clientPhone">Phone / WhatsApp *</label>
-<input id="clientPhone" placeholder="e.g. +234 907 717 8197" required="" type="tel"/>
-</div>
-</div>
-<div class="form-grid-2">
-<div class="form-field">
-<label for="projectType">Production Type *</label>
-<select id="projectType" required="">
-<option value="Editorial &amp; Fashion Campaign">High-Fashion Editorial</option>
-<option value="Commercial Advertising (TVC / Digital)">Commercial Advertising (TVC &amp; Digital)</option>
-<option value="Beauty &amp; Cosmetics">Beauty &amp; Cosmetics</option>
-<option value="Runway &amp; Fashion Week">Runway Show / Fashion Presentation</option>
-<option value="Brand Lookbook / E-Commerce">Lookbook / E-Commerce</option>
-</select>
-</div>
-<div class="form-field">
-<label for="requestedModel">Talent Requested *</label>
-<select id="requestedModel" required="">
-<option value="Open Casting (Multiple Models)">Open Casting — Multiple Models Recommended</option>
-<option value="Ada">Ada (Commercial · Beauty · Editorial)</option>
-<option value="Aisha">Aisha (Editorial · Glamour · Runway)</option>
-<option value="Anastasia">Anastasia (Runway · High Fashion)</option>
-<option value="Becky">Becky (Commercial · Beauty)</option>
-<option value="Belle">Belle (Beauty · Editorial)</option>
-<option value="Debby">Debby (Commercial · Bridal Beauty)</option>
-<option value="Ruth">Ruth (Commercial Hair &amp; Beauty)</option>
-</select>
-</div>
-</div>
-<div class="form-grid-3">
-<div class="form-field">
-<label for="shootDates">Shoot Dates / Window *</label>
-<input id="shootDates" placeholder="e.g. Dec 5–7, 2026" required="" type="text"/>
-</div>
-<div class="form-field">
-<label for="shootLocation">Shoot Location / City *</label>
-<input id="shootLocation" placeholder="e.g. Lagos (Studio &amp; On-Location)" required="" type="text"/>
-</div>
-<div class="form-field">
-<label for="usageScope">Usage &amp; Licensing *</label>
-<select id="usageScope" required="">
-<option value="Digital &amp; Social (1 Year)">Digital &amp; Social Media (1 Year)</option>
-<option value="All Media Worldwide (1 Year)">All Media Worldwide (1 Year)</option>
-<option value="Print &amp; OOH (6 Months)">Print &amp; Out of Home (6 Months)</option>
-<option value="Full Buyout">Full Commercial Buyout</option>
-<option value="Editorial Print Only">Editorial Print &amp; Digital Only</option>
-</select>
-</div>
-</div>
-<div class="form-field">
-<label for="projectNotes">Brief Details &amp; Creative Treatment</label>
-<textarea id="projectNotes" placeholder="Outline call times, styling references, photographer attachment, mood board link, or special requirements..." rows="4"></textarea>
-</div>
-<div style="margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
-<button class="btn" type="submit">Send Casting Request Via WhatsApp <span class="arrow">→</span></button>
-<a class="btn outline" href="mailto:bookings@beigemodel.org?subject=Commercial%20Booking%20Inquiry%20-%20Beige%20Models">Or Email Direct Brief</a>
-</div>
-<p style="color: #9c938d; font-size: 13px; margin-top: 18px; line-height: 1.5;">
-            * Clicking "Send Casting Request" generates an official booking reference and opens WhatsApp directly with Beige Agency Management (+234 907 717 8197) to confirm availability and schedule option holds.
-          </p>
-</form>
-</div>
-<!-- Agency Working Standards -->
-<div style="margin-top: 60px;">
-<span class="eyebrow">Professional Standards</span>
-<h3 style="font: 400 32px var(--font-serif); margin: 12px 0 16px;">Booking Assurance &amp; Standards</h3>
-<p style="color: #554e48; font-size: 17px; line-height: 1.6;">
-          Beige Model Management guarantees professional on-set conduct, prompt liaison, verified model identity, and clear talent agreements for all production partners across Nigeria, South Africa, the UK, Europe, and global fashion markets.
+      <p class="form-subtitle">Complete this brief to initiate an official booking request with Beige Model Management.</p>
+      
+      <!-- Visual Model Selection Chips -->
+      <div class="model-chips-container">
+        <span class="model-chips-label">Select Requested Talent</span>
+        <div class="model-chips-grid">
+          <div class="model-chip selected" data-model="Open Casting">
+            <div style="width:44px;height:44px;border-radius:50%;background:#2a2a2a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;border:1px solid rgba(255,255,255,0.2);">✦</div>
+            <div class="model-chip-info">
+              <span class="model-chip-name">Open Casting</span>
+              <span class="model-chip-cat">Full Roster</span>
+            </div>
+          </div>
+          <div class="model-chip" data-model="Ada">
+            <img src="../assets/images/models/ada-editorial-01.jpg" alt="Ada" loading="lazy"/>
+            <div class="model-chip-info">
+              <span class="model-chip-name">Ada</span>
+              <span class="model-chip-cat">Commercial · Beauty</span>
+            </div>
+          </div>
+          <div class="model-chip" data-model="Aisha">
+            <img src="../assets/images/models/aisha-editorial-01.jpg" alt="Aisha" loading="lazy"/>
+            <div class="model-chip-info">
+              <span class="model-chip-name">Aisha</span>
+              <span class="model-chip-cat">Editorial · Runway</span>
+            </div>
+          </div>
+          <div class="model-chip" data-model="Anastasia">
+            <img src="../assets/images/models/anastasia-editorial-01.jpg" alt="Anastasia" loading="lazy"/>
+            <div class="model-chip-info">
+              <span class="model-chip-name">Anastasia</span>
+              <span class="model-chip-cat">Runway · High Fashion</span>
+            </div>
+          </div>
+          <div class="model-chip" data-model="Becky">
+            <img src="../assets/images/models/becky-commercial-01.jpg" alt="Becky" loading="lazy"/>
+            <div class="model-chip-info">
+              <span class="model-chip-name">Becky</span>
+              <span class="model-chip-cat">Commercial · Lookbook</span>
+            </div>
+          </div>
+          <div class="model-chip" data-model="Belle">
+            <img src="../assets/images/models/belle-editorial-01.jpg" alt="Belle" loading="lazy"/>
+            <div class="model-chip-info">
+              <span class="model-chip-name">Belle</span>
+              <span class="model-chip-cat">Beauty · New Face</span>
+            </div>
+          </div>
+          <div class="model-chip" data-model="Debby">
+            <img src="../assets/images/models/debby-commercial-01.jpg" alt="Debby" loading="lazy"/>
+            <div class="model-chip-info">
+              <span class="model-chip-name">Debby</span>
+              <span class="model-chip-cat">Bridal · Glamour</span>
+            </div>
+          </div>
+          <div class="model-chip" data-model="Ruth">
+            <img src="../assets/images/models/ruth-commercial-01.jpg" alt="Ruth" loading="lazy"/>
+            <div class="model-chip-info">
+              <span class="model-chip-name">Ruth</span>
+              <span class="model-chip-cat">Commercial Hair</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form id="commercialBookingForm" onsubmit="handleCommercialBooking(event)">
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label for="clientCompany">Brand / Production Company *</label>
+            <input id="clientCompany" placeholder="e.g. Vogue Africa, MAC, Studio X" required="" type="text"/>
+          </div>
+          <div class="form-field">
+            <label for="clientName">Contact Person Name *</label>
+            <input id="clientName" placeholder="e.g. Sarah Mensah" required="" type="text"/>
+          </div>
+        </div>
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label for="clientEmail">Corporate Email *</label>
+            <input id="clientEmail" placeholder="e.g. casting@brand.com" required="" type="email"/>
+          </div>
+          <div class="form-field">
+            <label for="clientPhone">Phone / WhatsApp *</label>
+            <input id="clientPhone" placeholder="e.g. +234 907 717 8197" required="" type="tel"/>
+          </div>
+        </div>
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label for="projectType">Production Type *</label>
+            <select id="projectType" required="">
+              <option value="Editorial &amp; Fashion Campaign">High-Fashion Editorial</option>
+              <option value="Commercial Advertising (TVC / Digital)">Commercial Advertising (TVC &amp; Digital)</option>
+              <option value="Beauty &amp; Cosmetics">Beauty &amp; Cosmetics</option>
+              <option value="Runway &amp; Fashion Week">Runway Show / Fashion Presentation</option>
+              <option value="Brand Lookbook / E-Commerce">Lookbook / E-Commerce</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="requestedModel">Talent Requested *</label>
+            <select id="requestedModel" required="">
+              <option value="Open Casting (Multiple Models)">Open Casting — Multiple Models Recommended</option>
+              <option value="Ada">Ada (Commercial · Beauty · Editorial)</option>
+              <option value="Aisha">Aisha (Editorial · Glamour · Runway)</option>
+              <option value="Anastasia">Anastasia (Runway · High Fashion)</option>
+              <option value="Becky">Becky (Commercial · Beauty)</option>
+              <option value="Belle">Belle (Beauty · Editorial)</option>
+              <option value="Debby">Debby (Commercial · Bridal Beauty)</option>
+              <option value="Ruth">Ruth (Commercial Hair &amp; Beauty)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grid-3">
+          <div class="form-field">
+            <label for="shootDates">Shoot Dates / Window *</label>
+            <input id="shootDates" placeholder="e.g. Dec 5–7, 2026" required="" type="text"/>
+          </div>
+          <div class="form-field">
+            <label for="shootLocation">Shoot Location / City *</label>
+            <input id="shootLocation" placeholder="e.g. Lagos (Studio &amp; On-Location)" required="" type="text"/>
+          </div>
+          <div class="form-field">
+            <label for="usageScope">Usage &amp; Licensing *</label>
+            <select id="usageScope" required="">
+              <option value="Digital &amp; Social (1 Year)">Digital &amp; Social Media (1 Year)</option>
+              <option value="All Media Worldwide (1 Year)">All Media Worldwide (1 Year)</option>
+              <option value="Print &amp; OOH (6 Months)">Print &amp; Out of Home (6 Months)</option>
+              <option value="Full Buyout">Full Commercial Buyout</option>
+              <option value="Editorial Print Only">Editorial Print &amp; Digital Only</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label for="budgetBracket">Estimated Budget Bracket</label>
+            <select id="budgetBracket">
+              <option value="Standard Agency Rate Card">Standard Agency Rate Card</option>
+              <option value="Tier 1: ₦500,000 – ₦1,500,000 / $500 – $1,500">Tier 1: ₦500,000 – ₦1,500,000 / $500 – $1,500</option>
+              <option value="Tier 2: ₦1,500,000 – ₦3,500,000 / $1,500 – $3,500">Tier 2: ₦1,500,000 – ₦3,500,000 / $1,500 – $3,500</option>
+              <option value="Tier 3: ₦3,500,000 – ₦10,000,000+ / $3,500 – $10,000+">Tier 3: ₦3,500,000 – ₦10,000,000+ / $3,500 – $10,000+</option>
+              <option value="International Runway / Global Campaign">International Runway / Global Campaign</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="castingUrgency">Production Urgency</label>
+            <select id="castingUrgency">
+              <option value="Standard (Within 5–14 days)">Standard Production Window (5–14 Days)</option>
+              <option value="Priority (Within 48–72 hours)">Priority Cast Call (48–72 Hours)</option>
+              <option value="Immediate 24-Hour Hold">Emergency 24-Hour Option Hold</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="projectNotes">Brief Details &amp; Creative Treatment</label>
+          <textarea id="projectNotes" placeholder="Outline call times, styling references, photographer attachment, mood board link, or special requirements..." rows="4"></textarea>
+        </div>
+        <div style="margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
+          <button class="btn" type="submit">Send Casting Request Via WhatsApp <span class="arrow">→</span></button>
+          <button class="btn outline" id="copyBriefBtn" onclick="copyBookingBrief()" type="button">Copy Casting Brief</button>
+          <a class="btn outline" href="mailto:bookings@beigemodel.org?subject=Commercial%20Booking%20Inquiry%20-%20Beige%20Models">Or Email Direct Brief</a>
+        </div>
+        <p style="color: #9c938d; font-size: 13px; margin-top: 18px; line-height: 1.5;">
+          * Clicking "Send Casting Request" generates an official booking reference and opens WhatsApp directly with Beige Agency Management (+234 907 717 8197) to confirm availability and schedule option holds.
         </p>
-</div>
+      </form>
+    </div>
+
+    <!-- Agency Working Standards & Booking Assurance -->
+    <div style="margin-top: 70px;">
+      <span class="eyebrow">Professional Standards</span>
+      <h3 style="font: 400 36px var(--font-serif); margin: 12px 0 20px;">Booking Assurance &amp; Standards</h3>
+      <p style="color: #554e48; font-size: 18px; line-height: 1.6; max-width: 820px;">
+        Beige Model Management delivers seamless, transparent, and award-grade casting logistics for luxury fashion houses, commercial agencies, and production teams worldwide.
+      </p>
+
+      <div class="booking-assurance-grid">
+        <div class="booking-assurance-card">
+          <h4>01. Verified Talent Identity</h4>
+          <p>Every woman model on our roster is under exclusive or managed agency contract with verified measurements, background checks, and clear professional conduct standards.</p>
+        </div>
+        <div class="booking-assurance-card">
+          <h4>02. Rapid Availability Checks</h4>
+          <p>We provide first-option and second-option scheduling holds within 2 hours of inquiry receipt, avoiding production scheduling conflicts and shoot delays.</p>
+        </div>
+        <div class="booking-assurance-card">
+          <h4>03. Standard Releases &amp; IP Rights</h4>
+          <p>Clear, legally binding model release agreements, transparent buyout terms, and international usage rights structured to protect both the client and model.</p>
+        </div>
+      </div>
+    </div>
 </section>
 </main>
 <!-- Luxury Agency Footer -->
@@ -195,41 +296,6 @@
 <span>WhatsApp Beige</span>
 </a>
 <script src="../js/site-config.js"></script>
-<script>
-    function handleCommercialBooking(e) {
-      e.preventDefault();
-      var company = document.getElementById('clientCompany').value.trim();
-      var name = document.getElementById('clientName').value.trim();
-      var email = document.getElementById('clientEmail').value.trim();
-      var phone = document.getElementById('clientPhone').value.trim();
-      var projectType = document.getElementById('projectType').value;
-      var talent = document.getElementById('requestedModel').value;
-      var dates = document.getElementById('shootDates').value.trim();
-      var location = document.getElementById('shootLocation').value.trim();
-      var usage = document.getElementById('usageScope').value;
-      var notes = document.getElementById('projectNotes').value.trim() || 'None provided';
-
-      var refNum = 'BMM-' + Math.floor(100000 + Math.random() * 900000);
-      var phoneNum = (window.BEIGE_CONFIG && window.BEIGE_CONFIG.whatsappNumber) || "2349077178197";
-
-      var msg = "BEIGE TALENT BOOKING REQUEST [" + refNum + "]\n" +
-                "------------------------------------\n" +
-                "Client / Brand: " + company + "\n" +
-                "Contact Name: " + name + "\n" +
-                "Email: " + email + "\n" +
-                "Phone: " + phone + "\n" +
-                "Production Type: " + projectType + "\n" +
-                "Talent Requested: " + talent + "\n" +
-                "Shoot Dates: " + dates + "\n" +
-                "Location: " + location + "\n" +
-                "Usage Scope: " + usage + "\n" +
-                "Creative Brief: " + notes + "\n" +
-                "------------------------------------\n" +
-                "Please confirm talent availability and option schedule.";
-
-      var encoded = encodeURIComponent(msg);
-      window.open("https://wa.me/" + phoneNum + "?text=" + encoded, "_blank", "noopener,noreferrer");
-    }
-  </script>
+<script src="../js/forms.js"></script>
 </body>
 </html>

@@ -47,7 +47,7 @@ if missing_css:
 print(f"PASS: All {len(css_files)} CSS files exist.")
 
 # 3. Check JS files with Node
-js_files = ['js/site-config.js', 'js/main.js', 'js/profile.js']
+js_files = ['js/site-config.js', 'js/main.js', 'js/profile.js', 'js/roster.js', 'js/forms.js']
 for js in js_files:
     if not os.path.exists(js):
         print(f"ERROR: Missing JS file: {js}")

@@ -91,84 +91,214 @@
           </p>
 </div>
 </div>
-<!-- Application Form -->
-<div class="editorial-form-wrap" id="applicationFormWrap">
-<span class="eyebrow" style="color: var(--color-raspberry);">Direct Talent Submission</span>
-<h3>Apply For Representation</h3>
-<p class="form-subtitle">Complete your details below to prepare your official application package for our scouting board.</p>
-<form id="modelApplicationForm" onsubmit="handleModelApplication(event)">
-<div class="form-grid-2">
-<div class="form-field">
-<label for="applicantName">Full Legal Name *</label>
-<input id="applicantName" placeholder="e.g. Joy Okafor" required="" type="text"/>
-</div>
-<div class="form-field">
-<label for="applicantAge">Age *</label>
-<input id="applicantAge" max="35" min="15" placeholder="e.g. 20" required="" type="number"/>
-</div>
-</div>
-<div class="form-grid-2">
-<div class="form-field">
-<label for="applicantPhone">WhatsApp / Mobile Number *</label>
-<input id="applicantPhone" placeholder="e.g. +234 801 234 5678" required="" type="tel"/>
-</div>
-<div class="form-field">
-<label for="applicantEmail">Email Address *</label>
-<input id="applicantEmail" placeholder="e.g. joy@example.com" required="" type="email"/>
-</div>
-</div>
-<div class="form-grid-2">
-<div class="form-field">
-<label for="applicantCity">Current City / State *</label>
-<input id="applicantCity" placeholder="e.g. Lagos, Nigeria" required="" type="text"/>
-</div>
-<div class="form-field">
-<label for="applicantSocial">Instagram / TikTok Handle</label>
-<input id="applicantSocial" placeholder="@username" type="text"/>
-</div>
-</div>
-<div class="form-grid-3">
-<div class="form-field">
-<label for="applicantHeight">Height (cm) *</label>
-<input id="applicantHeight" placeholder="e.g. 178" required="" type="number"/>
-</div>
-<div class="form-field">
-<label for="applicantBust">Bust (inches) *</label>
-<input id="applicantBust" placeholder="e.g. 32" required="" type="number"/>
-</div>
-<div class="form-field">
-<label for="applicantWaist">Waist (inches) *</label>
-<input id="applicantWaist" placeholder="e.g. 24" required="" type="number"/>
-</div>
-</div>
-<div class="form-grid-2">
-<div class="form-field">
-<label for="applicantHips">Hips (inches) *</label>
-<input id="applicantHips" placeholder="e.g. 35" required="" type="number"/>
-</div>
-<div class="form-field">
-<label for="applicantCategory">Primary Interest *</label>
-<select id="applicantCategory" required="">
-<option value="Editorial &amp; Fashion">High Fashion &amp; Editorial</option>
-<option value="Runway">Runway &amp; Catwalk</option>
-<option value="Commercial &amp; Beauty">Commercial &amp; Beauty</option>
-<option value="All Divisions">Open to All Divisions</option>
-</select>
-</div>
-</div>
-<div class="form-field">
-<label for="applicantBio">Tell Us About Yourself</label>
-<textarea id="applicantBio" placeholder="Share your passions, background, languages spoken, or any prior creative experience..." rows="3"></textarea>
-</div>
-<div style="margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
-<button class="btn" type="submit">Submit Application Via WhatsApp <span class="arrow">→</span></button>
-<a class="btn outline" href="mailto:scouting@beigemodel.org?subject=Model%20Application%20-%20Beige%20Models">Or Apply via Email</a>
-</div>
-<p style="color: #9c938d; font-size: 13px; margin-top: 18px; line-height: 1.5;">
-            * Clicking "Submit Application Via WhatsApp" will format your full scouting card and connect you directly with the Beige Scouting Team to attach your 4 digital photographs.
+      <!-- Interactive Polaroid Digital Guide & Photo Upload Simulator -->
+      <div style="margin-top: 40px;">
+        <span class="eyebrow" style="color: var(--color-raspberry);">Visual Submission Guide</span>
+        <h3 style="font: 400 34px var(--font-serif); margin: 12px 0 14px;">The 4 Essential Digitals</h3>
+        <p style="color: #554e48; font-size: 17px; line-height: 1.6; max-width: 820px;">
+          Natural digitals (polaroids) showcase your raw beauty, bone structure, and physical proportions in clean daylight with zero filters. Select your photos below to preview your casting card:
+        </p>
+
+        <div class="polaroid-grid">
+          <!-- Card 1: Headshot -->
+          <div class="polaroid-card">
+            <div class="polaroid-frame" id="frameHeadshot">
+              <img alt="Headshot Preview" class="preview-img" src=""/>
+              <div class="polaroid-placeholder">
+                <span class="icon">📷</span>
+                <span class="text">Tap to Select Front Headshot</span>
+              </div>
+              <input accept="image/*" class="polaroid-file-input" type="file"/>
+            </div>
+            <div class="polaroid-meta">
+              <h5>01 · Headshot</h5>
+              <p>Bare skin, hair back, neutral expression, eye level.</p>
+            </div>
+            <div class="polaroid-badge">✓ Photo Added</div>
+          </div>
+
+          <!-- Card 2: Profile -->
+          <div class="polaroid-card">
+            <div class="polaroid-frame" id="frameProfile">
+              <img alt="Profile Preview" class="preview-img" src=""/>
+              <div class="polaroid-placeholder">
+                <span class="icon">📷</span>
+                <span class="text">Tap to Select Side Profile</span>
+              </div>
+              <input accept="image/*" class="polaroid-file-input" type="file"/>
+            </div>
+            <div class="polaroid-meta">
+              <h5>02 · Profile</h5>
+              <p>90° side angle, jawline visible, hair tucked behind ear.</p>
+            </div>
+            <div class="polaroid-badge">✓ Photo Added</div>
+          </div>
+
+          <!-- Card 3: Waist-Up -->
+          <div class="polaroid-card">
+            <div class="polaroid-frame" id="frameWaist">
+              <img alt="Waist-Up Preview" class="preview-img" src=""/>
+              <div class="polaroid-placeholder">
+                <span class="icon">📷</span>
+                <span class="text">Tap to Select Waist-Up</span>
+              </div>
+              <input accept="image/*" class="polaroid-file-input" type="file"/>
+            </div>
+            <div class="polaroid-meta">
+              <h5>03 · Waist-Up</h5>
+              <p>Natural relaxed smile or soft expression, plain top.</p>
+            </div>
+            <div class="polaroid-badge">✓ Photo Added</div>
+          </div>
+
+          <!-- Card 4: Full Length -->
+          <div class="polaroid-card">
+            <div class="polaroid-frame" id="frameFull">
+              <img alt="Full Length Preview" class="preview-img" src=""/>
+              <div class="polaroid-placeholder">
+                <span class="icon">📷</span>
+                <span class="text">Tap to Select Full Length</span>
+              </div>
+              <input accept="image/*" class="polaroid-file-input" type="file"/>
+            </div>
+            <div class="polaroid-meta">
+              <h5>04 · Full Length</h5>
+              <p>Head to toe, upright posture, fitted dark jeans or leggings.</p>
+            </div>
+            <div class="polaroid-badge">✓ Photo Added</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Application Form -->
+      <div class="editorial-form-wrap" id="applicationFormWrap">
+        <span class="eyebrow" style="color: var(--color-raspberry);">Direct Talent Submission</span>
+        <h3>Apply For Representation</h3>
+        <p class="form-subtitle">Complete your details below to prepare your official application package for our scouting board.</p>
+
+        <!-- Height Converter Helper -->
+        <div class="unit-converter-box">
+          <div>
+            <p><strong>Height Unit Converter:</strong> Know your height in Feet &amp; Inches? Convert to cm instantly:</p>
+            <span id="converterFeedback" style="font-size: 11px; color: #a89f98; margin-top: 4px; display: block;">Enter feet &amp; inches below:</span>
+          </div>
+          <div class="unit-converter-controls">
+            <input id="converterFeet" max="6" min="4" placeholder="Feet (e.g. 5)" type="number"/>
+            <input id="converterInches" max="11" min="0" placeholder="Inches (e.g. 10)" type="number"/>
+            <button onclick="convertHeightToCm()" type="button">Convert to CM</button>
+          </div>
+        </div>
+
+        <form id="modelApplicationForm" onsubmit="handleModelApplication(event)">
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="applicantName">Full Legal Name *</label>
+              <input id="applicantName" placeholder="e.g. Joy Okafor" required="" type="text"/>
+            </div>
+            <div class="form-field">
+              <label for="applicantAge">Age *</label>
+              <input id="applicantAge" max="35" min="15" placeholder="e.g. 20" required="" type="number"/>
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="applicantPhone">WhatsApp / Mobile Number *</label>
+              <input id="applicantPhone" placeholder="e.g. +234 801 234 5678" required="" type="tel"/>
+            </div>
+            <div class="form-field">
+              <label for="applicantEmail">Email Address *</label>
+              <input id="applicantEmail" placeholder="e.g. joy@example.com" required="" type="email"/>
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="applicantCity">Current City / State *</label>
+              <input id="applicantCity" placeholder="e.g. Lagos, Nigeria" required="" type="text"/>
+            </div>
+            <div class="form-field">
+              <label for="applicantSocial">Instagram / TikTok Handle</label>
+              <input id="applicantSocial" placeholder="@username" type="text"/>
+            </div>
+          </div>
+          <div class="form-grid-3">
+            <div class="form-field">
+              <label for="applicantHeight">Height (cm) *</label>
+              <input id="applicantHeight" placeholder="e.g. 178" required="" type="number"/>
+            </div>
+            <div class="form-field">
+              <label for="applicantBust">Bust (inches) *</label>
+              <input id="applicantBust" placeholder="e.g. 32" required="" type="number"/>
+            </div>
+            <div class="form-field">
+              <label for="applicantWaist">Waist (inches) *</label>
+              <input id="applicantWaist" placeholder="e.g. 24" required="" type="number"/>
+            </div>
+          </div>
+          <div class="form-grid-3">
+            <div class="form-field">
+              <label for="applicantHips">Hips (inches) *</label>
+              <input id="applicantHips" placeholder="e.g. 35" required="" type="number"/>
+            </div>
+            <div class="form-field">
+              <label for="applicantShoe">Shoe Size (EU / US)</label>
+              <input id="applicantShoe" placeholder="e.g. 39 EU / 8.5 US" type="text"/>
+            </div>
+            <div class="form-field">
+              <label for="applicantFeatures">Eye Color &amp; Hair</label>
+              <input id="applicantFeatures" placeholder="e.g. Dark Brown / Natural Afro" type="text"/>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="applicantCategory">Primary Interest *</label>
+            <select id="applicantCategory" required="">
+              <option value="Editorial &amp; Fashion">High Fashion &amp; Editorial</option>
+              <option value="Runway &amp; Catwalk">Runway &amp; Catwalk</option>
+              <option value="Commercial &amp; Beauty">Commercial &amp; Beauty</option>
+              <option value="Commercial Hair &amp; Cosmetics">Commercial Hair &amp; Cosmetics</option>
+              <option value="All Divisions">Open to All Divisions</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="applicantBio">Tell Us About Yourself</label>
+            <textarea id="applicantBio" placeholder="Share your passions, background, languages spoken, or any prior creative experience..." rows="3"></textarea>
+          </div>
+          <div style="margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
+            <button class="btn" type="submit">Submit Application Via WhatsApp <span class="arrow">→</span></button>
+            <a class="btn outline" href="mailto:scouting@beigemodel.org?subject=Model%20Application%20-%20Beige%20Models">Or Apply via Email</a>
+          </div>
+          <p style="color: #9c938d; font-size: 13px; margin-top: 18px; line-height: 1.5;">
+            * Clicking "Submit Application Via WhatsApp" formats your complete scouting card and connects you directly with the Beige Scouting Team to attach your 4 digital photographs.
           </p>
-</form>
-</div>
+        </form>
+      </div>
+
+      <!-- Model Scouting FAQ Accordion -->
+      <div class="faq-section">
+        <span class="eyebrow">Scouting Guidance</span>
+        <h3 style="font: 400 36px var(--font-serif); margin: 12px 0 20px;">Frequently Asked Questions</h3>
+        <div class="faq-list">
+          <details class="faq-item" open="">
+            <summary>Do I need prior professional experience or an expensive portfolio?</summary>
+            <p>No. Beige actively discovers and develops new faces. High-fashion and commercial agencies prefer clean, un-retouched smartphone digitals (polaroids) over stylized studio shoots. We assess raw bone structure, facial symmetry, skin tone, natural height, and confidence.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are there any application or registration fees?</summary>
+            <p><strong>Absolutely zero.</strong> Beige Model Management will NEVER ask you for money to audition, register, or apply. Any individual claiming to represent Beige who asks for an upfront fee or gift card is an impostor and should be reported immediately.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What are the general height guidelines?</summary>
+            <p>For high-fashion runway and international catwalk editorial, preferred height is 5'9" (175cm) to 6'0" (183cm). For commercial, beauty, cosmetics, and hair divisions, we represent talent from 5'7" (170cm) upwards with exceptional facial features, skin, and presence.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How quickly will I receive feedback after applying?</summary>
+            <p>Our scouting board reviews incoming applications on a weekly cycle. If your profile matches upcoming client briefs or board requirements, our talent liaison will contact you within 5 to 7 business days via WhatsApp or email to schedule an in-person or video call-back.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I apply if I live outside Lagos or internationally?</summary>
+            <p>Yes. While our headquarters are in Lagos, Nigeria, Beige represents talent across Africa (Abuja, Port Harcourt, Accra, Nairobi, Johannesburg) and arranges direct international representation for overseas placements.</p>
+          </details>
+        </div>
+      </div>
 </section>
 </main>
 <!-- Luxury Agency Footer -->
@@ -221,45 +351,6 @@
 <span>WhatsApp Beige</span>
 </a>
 <script src="../js/site-config.js"></script>
-<script>
-    function handleModelApplication(e) {
-      e.preventDefault();
-      var name = document.getElementById('applicantName').value.trim();
-      var age = document.getElementById('applicantAge').value.trim();
-      var phone = document.getElementById('applicantPhone').value.trim();
-      var email = document.getElementById('applicantEmail').value.trim();
-      var city = document.getElementById('applicantCity').value.trim();
-      var social = document.getElementById('applicantSocial').value.trim() || 'N/A';
-      var height = document.getElementById('applicantHeight').value.trim();
-      var bust = document.getElementById('applicantBust').value.trim();
-      var waist = document.getElementById('applicantWaist').value.trim();
-      var hips = document.getElementById('applicantHips').value.trim();
-      var category = document.getElementById('applicantCategory').value;
-      var bio = document.getElementById('applicantBio').value.trim() || 'N/A';
-
-      var phoneNum = (window.BEIGE_CONFIG && window.BEIGE_CONFIG.whatsappNumber) || "2349077178197";
-
-      var msg = "BEIGE MODEL SCOUTING APPLICATION\n" +
-                "------------------------------------\n" +
-                "Full Name: " + name + "\n" +
-                "Age: " + age + "\n" +
-                "Location: " + city + "\n" +
-                "Phone: " + phone + "\n" +
-                "Email: " + email + "\n" +
-                "Social Handle: " + social + "\n" +
-                "Measurements:\n" +
-                " - Height: " + height + " cm\n" +
-                " - Bust: " + bust + " in\n" +
-                " - Waist: " + waist + " in\n" +
-                " - Hips: " + hips + " in\n" +
-                "Division Interest: " + category + "\n" +
-                "Notes: " + bio + "\n" +
-                "------------------------------------\n" +
-                "I am attaching my 4 natural digital photos below.";
-
-      var encoded = encodeURIComponent(msg);
-      window.open("https://wa.me/" + phoneNum + "?text=" + encoded, "_blank", "noopener,noreferrer");
-    }
-  </script>
+<script src="../js/forms.js"></script>
 </body>
 </html>
