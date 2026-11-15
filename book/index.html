@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Book represented women models for editorial campaigns, commercial advertising, beauty productions, and runway shows with Beige Model Management.">
+  <title>Book Talent — Beige Model Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Italiana&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/interior.css">
+</head>
+<body class="interior-page">
+
+  <!-- Minimalist Brand Header -->
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Beige Model Management">
+      <div class="brand-emblem-wrap">
+        <img src="../assets/images/logo/beige-models-art.jpg" alt="Beige Models Emblem" class="brand-emblem" width="48" height="48">
+      </div>
+    </a>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="../models/">Models</a>
+      <a href="../about/">About</a>
+      <a href="../services/">Capabilities</a>
+      <a href="../journal/">Journal</a>
+      <a href="../contact/">Contact</a>
+    </nav>
+    <div class="header-right">
+      <a class="btn sm header-cta" href="../book/">Book a Model</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Booking Hero -->
+    <section class="interior-top">
+      <span class="eyebrow">Client Commercial Bookings · Lagos & Worldwide</span>
+      <h1>Commission<br>Exceptional<br><i class="accent">Talent.</i></h1>
+      <p>
+        Representing women models who embody confidence, versatility, and contemporary African luxury across commercial, beauty, runway, and international campaigns.
+      </p>
+    </section>
+
+    <!-- Booking Form & Process -->
+    <section class="interior-content">
+      <span class="eyebrow">Direct Casting Liaison</span>
+      <h2>Campaign Brief<br><i class="accent">& Requisition.</i></h2>
+      <p>
+        Submit your production details below. Our booking team responds promptly with talent availability, rate cards, and casting options.
+      </p>
+
+      <div class="editorial-form-wrap" id="bookingFormWrap">
+        <span class="eyebrow" style="color: var(--color-raspberry);">Client Brief Builder</span>
+        <h3>Request Model Availability</h3>
+        <p class="form-subtitle">Complete this brief to initiate an official booking request with Beige Model Management.</p>
+
+        <form id="commercialBookingForm" onsubmit="handleCommercialBooking(event)">
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="clientCompany">Brand / Production Company *</label>
+              <input type="text" id="clientCompany" required placeholder="e.g. Vogue Africa, MAC, Studio X">
+            </div>
+            <div class="form-field">
+              <label for="clientName">Contact Person Name *</label>
+              <input type="text" id="clientName" required placeholder="e.g. Sarah Mensah">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="clientEmail">Corporate Email *</label>
+              <input type="email" id="clientEmail" required placeholder="e.g. casting@brand.com">
+            </div>
+            <div class="form-field">
+              <label for="clientPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="clientPhone" required placeholder="e.g. +234 907 717 8197">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="projectType">Production Type *</label>
+              <select id="projectType" required>
+                <option value="Editorial & Fashion Campaign">High-Fashion Editorial</option>
+                <option value="Commercial Advertising (TVC / Digital)">Commercial Advertising (TVC & Digital)</option>
+                <option value="Beauty & Cosmetics">Beauty & Cosmetics</option>
+                <option value="Runway & Fashion Week">Runway Show / Fashion Presentation</option>
+                <option value="Brand Lookbook / E-Commerce">Lookbook / E-Commerce</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="requestedModel">Talent Requested *</label>
+              <select id="requestedModel" required>
+                <option value="Open Casting (Multiple Models)">Open Casting — Multiple Models Recommended</option>
+                <option value="Ada">Ada (Commercial · Beauty · Editorial)</option>
+                <option value="Aisha">Aisha (Editorial · Glamour · Runway)</option>
+                <option value="Anastasia">Anastasia (Runway · High Fashion)</option>
+                <option value="Becky">Becky (Commercial · Beauty)</option>
+                <option value="Belle">Belle (Beauty · Editorial)</option>
+                <option value="Debby">Debby (Commercial · Bridal Beauty)</option>
+                <option value="Ruth">Ruth (Commercial Hair & Beauty)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-3">
+            <div class="form-field">
+              <label for="shootDates">Shoot Dates / Window *</label>
+              <input type="text" id="shootDates" required placeholder="e.g. Dec 5–7, 2026">
+            </div>
+            <div class="form-field">
+              <label for="shootLocation">Shoot Location / City *</label>
+              <input type="text" id="shootLocation" required placeholder="e.g. Lagos (Studio & On-Location)">
+            </div>
+            <div class="form-field">
+              <label for="usageScope">Usage & Licensing *</label>
+              <select id="usageScope" required>
+                <option value="Digital & Social (1 Year)">Digital & Social Media (1 Year)</option>
+                <option value="All Media Worldwide (1 Year)">All Media Worldwide (1 Year)</option>
+                <option value="Print & OOH (6 Months)">Print & Out of Home (6 Months)</option>
+                <option value="Full Buyout">Full Commercial Buyout</option>
+                <option value="Editorial Print Only">Editorial Print & Digital Only</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="projectNotes">Brief Details & Creative Treatment</label>
+            <textarea id="projectNotes" rows="4" placeholder="Outline call times, styling references, photographer attachment, mood board link, or special requirements..."></textarea>
+          </div>
+
+          <div style="margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
+            <button type="submit" class="btn">Send Casting Request Via WhatsApp <span class="arrow">→</span></button>
+            <a class="btn outline" href="mailto:bookings@beigemodel.org?subject=Commercial%20Booking%20Inquiry%20-%20Beige%20Models">Or Email Direct Brief</a>
+          </div>
+
+          <p style="color: #9c938d; font-size: 13px; margin-top: 18px; line-height: 1.5;">
+            * Clicking "Send Casting Request" generates an official booking reference and opens WhatsApp directly with Beige Agency Management (+234 907 717 8197) to confirm availability and schedule option holds.
+          </p>
+        </form>
+      </div>
+
+      <!-- Agency Working Standards -->
+      <div style="margin-top: 60px;">
+        <span class="eyebrow">Professional Standards</span>
+        <h3 style="font: 400 32px var(--font-serif); margin: 12px 0 16px;">Booking Assurance & Standards</h3>
+        <p style="color: #554e48; font-size: 17px; line-height: 1.6;">
+          Beige Model Management guarantees professional on-set conduct, prompt liaison, verified model identity, and clear talent agreements for all production partners across Nigeria, South Africa, the UK, Europe, and global fashion markets.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Agency Footer -->
+  <footer id="contact">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Beige Model Management">
+          <div class="brand-emblem-wrap">
+            <img src="../assets/images/logo/beige-models-art.jpg" alt="Beige Models Emblem" class="brand-emblem" width="48" height="48">
+          </div>
+        </a>
+        <p>
+          Discovering distinctive faces. Nurturing international presence. Defining contemporary African elegance on the global fashion stage.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="../index.html">Home</a>
+        <a href="../models/">Models Roster</a>
+        <a href="../about/">About Agency</a>
+        <a href="../services/">Capabilities</a>
+        <a href="../journal/">Editorial Journal</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Opportunities</h4>
+        <a href="../book/">Book Talent</a>
+        <a href="../apply/">Become a Model</a>
+        <a href="https://www.instagram.com/beigemodels/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Agency Headquarters</h4>
+        <p>Lagos, Nigeria</p>
+        <a href="../contact/">Contact details & enquiries</a>
+        <div style="margin-top: 18px;">
+          <a class="footer-cta-btn" href="../contact/">Contact Agency <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Beige Model Management. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="../legal/">Legal information & Model Protection</a>
+      </div>
+      <span class="serif" style="color: var(--color-raspberry); font-size: 15px;">The Art of Representation.</span>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a class="whatsapp-float" href="https://wa.me/2349077178197?text=Hello%20Beige%20Bookings%2C%20I%20would%20like%20to%20inquire%20about%20booking%20talent." target="_blank" rel="noopener noreferrer" aria-label="Chat with Beige Bookings on WhatsApp">
+    <span class="whatsapp-dot" aria-hidden="true"></span>
+    <span>WhatsApp Beige</span>
+  </a>
+
+  <script src="../js/site-config.js"></script>
+  <script>
+    function handleCommercialBooking(e) {
+      e.preventDefault();
+      var company = document.getElementById('clientCompany').value.trim();
+      var name = document.getElementById('clientName').value.trim();
+      var email = document.getElementById('clientEmail').value.trim();
+      var phone = document.getElementById('clientPhone').value.trim();
+      var projectType = document.getElementById('projectType').value;
+      var talent = document.getElementById('requestedModel').value;
+      var dates = document.getElementById('shootDates').value.trim();
+      var location = document.getElementById('shootLocation').value.trim();
+      var usage = document.getElementById('usageScope').value;
+      var notes = document.getElementById('projectNotes').value.trim() || 'None provided';
+
+      var refNum = 'BMM-' + Math.floor(100000 + Math.random() * 900000);
+      var phoneNum = (window.BEIGE_CONFIG && window.BEIGE_CONFIG.whatsappNumber) || "2349077178197";
+
+      var msg = "BEIGE TALENT BOOKING REQUEST [" + refNum + "]\n" +
+                "------------------------------------\n" +
+                "Client / Brand: " + company + "\n" +
+                "Contact Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Phone: " + phone + "\n" +
+                "Production Type: " + projectType + "\n" +
+                "Talent Requested: " + talent + "\n" +
+                "Shoot Dates: " + dates + "\n" +
+                "Location: " + location + "\n" +
+                "Usage Scope: " + usage + "\n" +
+                "Creative Brief: " + notes + "\n" +
+                "------------------------------------\n" +
+                "Please confirm talent availability and option schedule.";
+
+      var encoded = encodeURIComponent(msg);
+      window.open("https://wa.me/" + phoneNum + "?text=" + encoded, "_blank", "noopener,noreferrer");
+    }
+  </script>
+</body>
+</html>
