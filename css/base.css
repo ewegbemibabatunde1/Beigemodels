@@ -19,8 +19,8 @@ body {
   color: var(--color-white);
   font-family: var(--font-sans);
   font-size: var(--text-body);
-  line-height: 1.75;
-  letter-spacing: 0.01em;
+  line-height: 1.8;
+  letter-spacing: 0.015em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -76,6 +76,10 @@ img, picture, video {
   font-weight: 400;
 }
 
+.editorial-font {
+  font-family: var(--font-editorial);
+}
+
 .accent {
   color: var(--color-raspberry);
   font-style: italic;
@@ -86,9 +90,10 @@ img, picture, video {
   align-items: center;
   gap: 12px;
   color: var(--color-raspberry);
+  font-family: var(--font-sans);
   font-size: var(--text-eyebrow);
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
@@ -104,15 +109,17 @@ img, picture, video {
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 9px;
-  letter-spacing: 0.18em;
+  font-size: 10px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.65);
+  font-family: var(--font-sans);
+  font-weight: 500;
 }
 
 .scroll-cue::before {
   content: "";
-  width: 44px;
+  width: 36px;
   height: 1px;
   background-color: var(--color-raspberry);
 }
@@ -121,8 +128,8 @@ img, picture, video {
 .cursor-glow {
   position: fixed;
   z-index: 1;
-  width: 280px;
-  height: 280px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   pointer-events: none;
   background: radial-gradient(circle, rgba(192, 48, 80, 0.08), transparent 70%);

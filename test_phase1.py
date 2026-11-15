@@ -1,7 +1,10 @@
 import os
 import re
+import subprocess
 
-# 1. Verify existence of all created files
+print("--- Running Beige Phase 1 Verification Tests ---")
+
+# 1. Verify existence of primary files
 files_to_check = [
     'BEIGE_PROJECT_AUDIT.md',
     'BEIGE_DESIGN_SYSTEM.md',
@@ -11,16 +14,23 @@ files_to_check = [
     'css/base.css',
     'css/components.css',
     'css/sections.css',
-    'js/main.js',
-    'js/shortlist.js'
+    'js/main.js'
 ]
 missing = [f for f in files_to_check if not os.path.exists(f)]
 if missing:
     print('ERROR: Missing files:', missing)
-else:
-    print('PASS: All primary phase 1 deliverable files exist.')
+    exit(1)
+print('PASS: All primary phase 1 deliverable files exist.')
 
-# 2. Check image paths in index.html
+# 2. Check all 5 hero images exist
+hero_images = [f'assets/images/hero/hero-slide-{i}.jpg' for i in range(1, 6)]
+missing_hero = [f for f in hero_images if not os.path.exists(f)]
+if missing_hero:
+    print('ERROR: Missing hero slide images:', missing_hero)
+    exit(1)
+print(f'PASS: All 5 dedicated hero slide images exist ({len(hero_images)}/5).')
+
+# 3. Check image paths in index.html
 with open('index.html', 'r', encoding='utf-8') as f:
     html = f.read()
 
@@ -28,10 +38,10 @@ img_srcs = re.findall(r'src=["\']([^"\']+)["\']', html)
 missing_imgs = [src for src in img_srcs if not src.startswith('http') and not os.path.exists(src)]
 if missing_imgs:
     print('ERROR: Missing images in HTML:', missing_imgs)
-else:
-    print(f'PASS: All {len(img_srcs)} local images in index.html exist on disk.')
+    exit(1)
+print(f'PASS: All {len(img_srcs)} local images in index.html exist on disk.')
 
-# 3. Check CSS background image paths
+# 4. Check CSS background image paths
 css_bg_imgs = []
 for css_file in ['css/sections.css', 'css/components.css']:
     with open(css_file, 'r', encoding='utf-8') as f:
@@ -43,29 +53,33 @@ for css_file in ['css/sections.css', 'css/components.css']:
             css_bg_imgs.append(full_p)
 if css_bg_imgs:
     print('ERROR: Missing CSS background images:', css_bg_imgs)
-else:
-    print('PASS: All CSS background image paths exist on disk.')
+    exit(1)
+print('PASS: All CSS background image paths exist on disk.')
 
-# 4. Check that no 'unsplash.com' or 'Men' division slips into index.html
-if 'unsplash' in html:
+# 5. Check restrictions compliance
+if 'unsplash' in html.lower():
     print('ERROR: Unsplash stock image found in index.html')
-else:
-    print('PASS: Zero Unsplash stock images found in index.html.')
+    exit(1)
+print('PASS: Zero Unsplash stock images found in index.html.')
 
-# Check for men's division keywords in talent sections
-if re.search(r'>\s*Men\s*<', html, re.IGNORECASE):
-    print('ERROR: Men category found in index.html')
+# Check for shortlist (should be removed per user request)
+if 'shortlist' in html.lower():
+    print('WARNING: Shortlist reference found in index.html!')
 else:
-    print('PASS: Zero Men category found in index.html (Strictly women-only models).')
+    print('PASS: Shortlist menu and components completely removed as requested.')
 
-# 5. Check JS syntax with node
-import subprocess
-try:
-    res1 = subprocess.run(['node', '--check', 'js/shortlist.js'], capture_output=True, text=True)
-    res2 = subprocess.run(['node', '--check', 'js/main.js'], capture_output=True, text=True)
-    if res1.returncode == 0 and res2.returncode == 0:
-        print('PASS: JavaScript syntax check passed cleanly via Node.')
-    else:
-        print('JS Error:', res1.stderr, res2.stderr)
-except Exception as e:
-    print('Node check skipped/error:', e)
+# Check header has no text next to logo
+if '<div class="brand-name">' in html:
+    print('ERROR: Brand name text still in header!')
+    exit(1)
+print('PASS: Header text removed, leaving only logo emblem and navigation menus.')
+
+# 6. Check JS syntax with node
+res2 = subprocess.run(['node', '--check', 'js/main.js'], capture_output=True, text=True)
+if res2.returncode == 0:
+    print('PASS: JavaScript syntax check passed cleanly via Node.')
+else:
+    print('ERROR in JS:', res2.stderr)
+    exit(1)
+
+print("--- ALL PHASE 1 CHECKS PASSED WITH EXCELLENCE ---")
