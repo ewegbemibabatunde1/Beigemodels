@@ -78,7 +78,38 @@
     }
   }
 
-  // 5. Back to Top Smooth Cue (optional click on brand to smooth scroll if on homepage)
+  // 5. Mobile Navigation Toggle (Universal)
+  function initMobileNav() {
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('mainNav');
+    if (!toggle || !nav) return;
+    if (toggle.getAttribute('data-bound') === 'true') return;
+    toggle.setAttribute('data-bound', 'true');
+
+    function closeMenu() {
+      nav.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = '☰';
+    }
+
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      document.body.classList.toggle('menu-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.textContent = open ? '✕' : '☰';
+    });
+
+    nav.querySelectorAll('a').forEach(function (l) {
+      l.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
+
+  // 6. Back to Top Smooth Cue
   function initBrandClick() {
     var brand = document.querySelector('.site-header .brand');
     if (brand && window.location.pathname.endsWith('index.html') && !window.location.pathname.includes('/')) {
@@ -97,6 +128,7 @@
     initHeaderScroll();
     initCursorGlow();
     initYear();
+    initMobileNav();
     initBrandClick();
   }
 
