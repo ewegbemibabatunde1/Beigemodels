@@ -30,6 +30,7 @@
 
         if (matchesFilter && matchesSearch) {
           card.classList.remove('hidden');
+          card.classList.add('visible');
           visibleCount++;
         } else {
           card.classList.add('hidden');

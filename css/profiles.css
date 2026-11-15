@@ -225,16 +225,25 @@
    Individual Profile Enhancements
    ========================================================================== */
 .profile-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 5;
+  z-index: 50;
   padding: 22px var(--page-pad);
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #fff;
+  transition: padding var(--duration-fast) ease, background var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+.profile-header.scrolled {
+  padding: 14px var(--page-pad);
+  background: rgba(16, 16, 16, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .profile-header a {

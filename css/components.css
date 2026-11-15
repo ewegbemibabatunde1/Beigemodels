@@ -39,6 +39,15 @@
   box-shadow: var(--shadow-glow);
 }
 
+.btn .arrow {
+  display: inline-block;
+  transition: transform var(--duration-fast) var(--ease-editorial);
+}
+
+.btn:hover .arrow {
+  transform: translateX(4px);
+}
+
 .btn.outline {
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.45);
@@ -290,7 +299,7 @@ footer#contact {
    Site Header & Navigation (Minimalist: Only Logo, Menus & Book Button)
    ========================================================================== */
 .site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -303,6 +312,13 @@ footer#contact {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background: linear-gradient(180deg, rgba(16,16,16,0.85) 0%, rgba(16,16,16,0.3) 100%);
+  transition: padding var(--duration-fast) ease, background var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+.site-header.scrolled {
+  padding: 14px var(--page-pad);
+  background: rgba(16, 16, 16, 0.94);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .brand {
