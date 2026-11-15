@@ -10,10 +10,10 @@
   <meta property="og:type" content="website">
   <title>BEIGE Model Management — The Art of Representation</title>
 
-  <!-- Google Web Fonts: Italiana & Cormorant Garamond (Editorial Serifs), Plus Jakarta Sans & Tenor Sans (Luxury Editorial Typography) -->
+  <!-- Google Web Fonts: Italiana & Cormorant Garamond (Editorial Serifs), Playfair Display, Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Italiana&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Italiana&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Modular Design System Stylesheets -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -25,9 +25,9 @@
   <!-- Ambient Cursor Glow for Desktop Fine Pointers -->
   <div class="cursor-glow" aria-hidden="true"></div>
 
-  <!-- Global Site Header (Minimalist: Logo, Menus, Book Button Only) -->
+  <!-- Global Site Header (Minimalist: Only Logo, Menus, & Fixed Book Button) -->
   <header class="site-header">
-    <!-- Brand Mark: Logo Only (Text Removed as Requested) -->
+    <!-- Brand Mark: Logo Artwork Only -->
     <a class="brand" href="#home" aria-label="Beige Model Management — Home">
       <div class="brand-emblem-wrap">
         <img src="assets/images/logo/beige-models-art.jpg" alt="Beige Models Logo" class="brand-emblem" width="48" height="48">
@@ -54,93 +54,76 @@
   </header>
 
   <main id="mainContent">
-    <!-- 1. Hero Section: Split Editorial Canvas with Unobscured 5-Slide Auto Carousel -->
+    <!-- 1. Full-Screen Cinematic Hero Canvas with 5-Slide Auto Carousel (Every 6s) -->
     <section class="hero" id="home" aria-label="Introduction">
-      <div class="hero-container">
-        <div class="hero-grid">
-          
-          <!-- Left Column: Editorial Typography & Intent -->
-          <div class="hero-content-col reveal visible">
-            <span class="eyebrow">The Art of Representation · Lagos & Worldwide</span>
-            <h1>
-              <span>Beauty has</span>
-              <span>no <i class="accent">single</i></span>
-              <span>definition.</span>
-            </h1>
-            <p class="hero-description">
-              Discovering distinctive women faces. Developing exceptional talent. Creating meaningful representation across editorial, runway, and global commercial campaigns.
-            </p>
-            <div class="hero-actions">
-              <a class="btn" href="#models">Discover our models <span class="arrow">→</span></a>
-              <a class="btn outline" href="#recruitment">Become a model</a>
-            </div>
-
-            <!-- Slide Progress & Navigation Controls (6-second auto swipe) -->
-            <div class="hero-nav-bar">
-              <span class="hero-counter" id="heroCounter">01 / 05</span>
-              <div class="hero-progress-track" aria-hidden="true">
-                <div class="hero-progress-fill" id="heroProgressFill"></div>
-              </div>
-              <div class="hero-arrow-btns">
-                <button class="hero-arrow-btn" id="heroPrevBtn" type="button" aria-label="Previous model photo">←</button>
-                <button class="hero-arrow-btn" id="heroNextBtn" type="button" aria-label="Next model photo">→</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Column: 100% Unobscured High-Fashion Model Showcase (5 Slides Swiping every 6s) -->
-          <div class="hero-visual-col tilt reveal visible" aria-label="Featured Talent Photography Carousel">
-            <div class="hero-slider-track" id="heroSliderTrack">
-              
-              <!-- Slide 1: Lighthill Photo Studio Editorial -->
-              <div class="hero-slide active" data-slide="0">
-                <img src="assets/images/hero/hero-slide-1.jpg" alt="Beige Model in high-fashion editorial portrait by Lighthill Photography" width="1000" height="1250">
-                <div class="hero-slide-caption">
-                  <span class="hero-caption-name">Editorial Beauty</span>
-                  <span class="hero-caption-credit">Lighthill Photography</span>
-                </div>
-              </div>
-
-              <!-- Slide 2: Anastasia for Glam Drop -->
-              <div class="hero-slide" data-slide="1">
-                <img src="assets/images/hero/hero-slide-2.jpg" alt="Beige Model Anastasia in high editorial styling for Glam Drop" width="1000" height="1250" loading="lazy">
-                <div class="hero-slide-caption">
-                  <span class="hero-caption-name">Anastasia</span>
-                  <span class="hero-caption-credit">Client: Glam Drop</span>
-                </div>
-              </div>
-
-              <!-- Slide 3: Quite Confident Campaign -->
-              <div class="hero-slide" data-slide="2">
-                <img src="assets/images/hero/hero-slide-3.jpg" alt="Beige Model in confident high-fashion campaign" width="1000" height="1250" loading="lazy">
-                <div class="hero-slide-caption">
-                  <span class="hero-caption-name">Runway & Editorial</span>
-                  <span class="hero-caption-credit">Lighthill Photography</span>
-                </div>
-              </div>
-
-              <!-- Slide 4: Aisha for Finessed by SB -->
-              <div class="hero-slide" data-slide="3">
-                <img src="assets/images/hero/hero-slide-4.jpg" alt="Beige Model Aisha in luxury glamour portrait" width="1000" height="1250" loading="lazy">
-                <div class="hero-slide-caption">
-                  <span class="hero-caption-name">Aisha</span>
-                  <span class="hero-caption-credit">Artist: @beatbyab</span>
-                </div>
-              </div>
-
-              <!-- Slide 5: Ada for Beauty by Dii -->
-              <div class="hero-slide" data-slide="4">
-                <img src="assets/images/hero/hero-slide-5.jpg" alt="Beige Model Ada in high glamour campaign" width="1000" height="1250" loading="lazy">
-                <div class="hero-slide-caption">
-                  <span class="hero-caption-name">Ada</span>
-                  <span class="hero-caption-credit">Client: Beauty by Dii</span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
+      
+      <!-- 5-Slide Full-Screen Background Carousel (Model Unobscured on Right Half) -->
+      <div class="hero-slider-bg" id="heroSliderBg" aria-hidden="true">
+        
+        <!-- Slide 1: Lighthill Photography High-Fashion Portrait -->
+        <div class="hero-slide active" data-slide="0">
+          <img src="assets/images/hero/hero-slide-1.jpg" alt="Beige Model in high-fashion editorial portrait" width="2880" height="3600">
         </div>
+
+        <!-- Slide 2: Anastasia for Glam Drop -->
+        <div class="hero-slide" data-slide="1">
+          <img src="assets/images/hero/hero-slide-2.jpg" alt="Beige Model Anastasia in luxury editorial styling" width="1170" height="1552" loading="lazy">
+        </div>
+
+        <!-- Slide 3: Quite Confident Campaign -->
+        <div class="hero-slide" data-slide="2">
+          <img src="assets/images/hero/hero-slide-3.jpg" alt="Beige Model in confident high-fashion runway campaign" width="2880" height="3600" loading="lazy">
+        </div>
+
+        <!-- Slide 4: Aisha for Finessed by SB -->
+        <div class="hero-slide" data-slide="3">
+          <img src="assets/images/hero/hero-slide-4.jpg" alt="Beige Model Aisha in glamour beauty editorial" width="1184" height="1568" loading="lazy">
+        </div>
+
+        <!-- Slide 5: Ada for Beauty by Dii -->
+        <div class="hero-slide" data-slide="4">
+          <img src="assets/images/hero/hero-slide-5.jpg" alt="Beige Model Ada in high glamour campaign" width="1088" height="1440" loading="lazy">
+        </div>
+
+      </div>
+
+      <!-- Directional Gradient Overlay (Shields text on left, keeps model 100% visible on right) -->
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <!-- Foreground Editorial Content -->
+      <div class="hero-inner">
+        <div class="hero-copy reveal visible">
+          <span class="eyebrow">The Art of Representation · Lagos & Worldwide</span>
+          <h1>
+            <span>Beauty has</span>
+            <span>no <i class="accent">single</i></span>
+            <span>definition.</span>
+          </h1>
+          <p class="hero-description">
+            Discovering distinctive women faces. Developing exceptional talent. Creating meaningful representation across editorial, runway, and global commercial campaigns.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#models">Discover our models <span class="arrow">→</span></a>
+            <a class="btn outline" href="#recruitment">Become a model</a>
+          </div>
+
+          <!-- 6-Second Carousel Progress & Navigation Dock -->
+          <div class="hero-controls">
+            <span class="hero-counter" id="heroCounter">01 / 05</span>
+            <div class="hero-progress-track" aria-hidden="true">
+              <div class="hero-progress-fill" id="heroProgressFill"></div>
+            </div>
+            <div class="hero-arrow-btns">
+              <button class="hero-arrow-btn" id="heroPrevBtn" type="button" aria-label="Previous model photo">←</button>
+              <button class="hero-arrow-btn" id="heroNextBtn" type="button" aria-label="Next model photo">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>The Art of Representation · Lagos, Nigeria</span>
+        <div class="scroll-cue">Scroll to explore</div>
       </div>
     </section>
 
@@ -285,7 +268,7 @@
       </div>
     </section>
 
-    <!-- 6. Direct High-Conversion Booking Section (Interactive Enquiry Form) -->
+    <!-- 6. Direct High-Conversion Booking Section -->
     <section class="conversion-section" id="booking" aria-label="Client Booking Pathway">
       <div class="conversion-grid">
         

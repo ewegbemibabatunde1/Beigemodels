@@ -76,8 +76,12 @@ img, picture, video {
   font-weight: 400;
 }
 
-.editorial-font {
-  font-family: var(--font-editorial);
+.description-style {
+  font-family: var(--font-description);
+  font-size: var(--text-description);
+  line-height: 1.65;
+  letter-spacing: 0.015em;
+  color: #ebe4dd;
 }
 
 .accent {
@@ -112,9 +116,9 @@ img, picture, video {
   font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.7);
   font-family: var(--font-sans);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .scroll-cue::before {

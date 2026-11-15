@@ -1,7 +1,7 @@
 /**
  * BEIGE MODEL MANAGEMENT — MAIN INTERACTION CONTROLLER
  * Controls:
- * 1. 5-Slide Unobscured Hero Carousel (6-second auto-swipe, progress bar, touch swipe, controls)
+ * 1. 5-Slide Full-Screen Immersive Hero Carousel (6-second auto-swipe, progress bar, controls)
  * 2. Minimalist Header Navigation
  * 3. Direct Booking Inquiry Form & Conversion Engine
  * 4. Scroll Reveals, 3D Tilt & Ambient Glow
@@ -10,14 +10,14 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
-     1. Hero 5-Slide Auto Carousel (Every 6 Seconds)
+     1. Hero 5-Slide Background Auto Carousel (Every 6 Seconds)
      ========================================================================== */
   const slides = document.querySelectorAll('.hero-slide');
   const slideCounter = document.getElementById('heroCounter');
   const progressBar = document.getElementById('heroProgressFill');
   const prevBtn = document.getElementById('heroPrevBtn');
   const nextBtn = document.getElementById('heroNextBtn');
-  const sliderContainer = document.querySelector('.hero-visual-col');
+  const heroSection = document.getElementById('home');
 
   let currentSlideIndex = 0;
   const totalSlides = slides.length;
@@ -102,21 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Pause on hover over visual column
-    if (sliderContainer) {
-      sliderContainer.addEventListener('mouseenter', stopAutoSlide);
-      sliderContainer.addEventListener('mouseleave', startAutoSlide);
-
+    // Pause on hover over hero section controls
+    if (heroSection) {
       // Touch swipe support for mobile
       let touchStartX = 0;
       let touchEndX = 0;
 
-      sliderContainer.addEventListener('touchstart', (e) => {
+      heroSection.addEventListener('touchstart', (e) => {
         touchStartX = e.changedTouches[0].screenX;
-        stopAutoSlide();
       }, { passive: true });
 
-      sliderContainer.addEventListener('touchend', (e) => {
+      heroSection.addEventListener('touchend', (e) => {
         touchEndX = e.changedTouches[0].screenX;
         const deltaX = touchEndX - touchStartX;
         if (Math.abs(deltaX) > 40) {
@@ -125,8 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
           } else {
             prevSlide();
           }
+          startAutoSlide();
         }
-        startAutoSlide();
       }, { passive: true });
     }
   }
