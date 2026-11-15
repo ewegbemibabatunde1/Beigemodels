@@ -52,6 +52,36 @@
   box-shadow: var(--shadow-subtle);
 }
 
+/* High-Contrast Outline Buttons on Light / Ivory Surfaces */
+.interior-content .btn.outline,
+.interior-actions .btn.outline,
+.about-copy .btn.outline,
+.services-section .btn.outline,
+.talent-strip .btn.outline,
+.social-section .btn.outline,
+.btn.outline-dark,
+.btn.outline.dark {
+  background-color: transparent;
+  border: 1.5px solid var(--color-black);
+  color: var(--color-black);
+  font-weight: 700;
+}
+
+.interior-content .btn.outline:hover,
+.interior-actions .btn.outline:hover,
+.about-copy .btn.outline:hover,
+.services-section .btn.outline:hover,
+.talent-strip .btn.outline:hover,
+.social-section .btn.outline:hover,
+.btn.outline-dark:hover,
+.btn.outline.dark:hover {
+  background-color: var(--color-black);
+  border-color: var(--color-black);
+  color: var(--color-white);
+  box-shadow: 0 4px 15px rgba(16, 16, 16, 0.2);
+  transform: translateY(-2px);
+}
+
 .btn.dark {
   background-color: var(--color-black);
   border-color: var(--color-black);
@@ -61,19 +91,6 @@
 .btn.dark:hover {
   background-color: var(--color-raspberry);
   border-color: var(--color-raspberry);
-}
-
-.btn.outline-dark {
-  background-color: transparent;
-  border-color: rgba(16, 16, 16, 0.45);
-  color: var(--color-black);
-}
-
-.btn.outline-dark:hover {
-  background-color: var(--color-black);
-  border-color: var(--color-black);
-  color: var(--color-white);
-  box-shadow: 0 4px 14px rgba(16, 16, 16, 0.12);
 }
 
 .btn.sm {
