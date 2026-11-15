@@ -241,6 +241,20 @@
   line-height: 1.6;
 }
 
+.talent-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+  align-items: flex-start;
+}
+
+.talent-actions .btn {
+  width: 100%;
+  max-width: 220px;
+  justify-content: space-between;
+}
+
 .talent-card {
   position: relative;
   min-height: 400px;
