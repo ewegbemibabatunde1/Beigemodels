@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage -->
+  <url>
+    <loc>https://beigemodel.org/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://beigemodel.org/assets/images/logo/beige-models-art.jpg</image:loc>
+      <image:title>Beige Model Management Emblem</image:title>
+    </image:image>
+  </url>
+
+  <!-- Models Roster Directory -->
+  <url>
+    <loc>https://beigemodel.org/models/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Individual Model Profiles -->
+  <url>
+    <loc>https://beigemodel.org/models/ada/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://beigemodel.org/assets/images/models/ada-editorial-01.jpg</image:loc>
+      <image:title>Ada — Beige Model Management Portfolio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://beigemodel.org/models/aisha/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://beigemodel.org/assets/images/models/aisha-editorial-01.jpg</image:loc>
+      <image:title>Aisha — Beige Model Management Portfolio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://beigemodel.org/models/anastasia/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://beigemodel.org/assets/images/models/anastasia-editorial-01.jpg</image:loc>
+      <image:title>Anastasia — Beige Model Management Portfolio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://beigemodel.org/models/becky/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://beigemodel.org/assets/images/models/becky-commercial-01.jpg</image:loc>
+      <image:title>Becky — Beige Model Management Portfolio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://beigemodel.org/models/belle/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://beigemodel.org/assets/images/models/belle-beauty-01.jpg</image:loc>
+      <image:title>Belle — Beige Model Management Portfolio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://beigemodel.org/models/debby/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://beigemodel.org/assets/images/models/debby-beauty-01.jpg</image:loc>
+      <image:title>Debby — Beige Model Management Portfolio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://beigemodel.org/models/ruth/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://beigemodel.org/assets/images/models/ruth-beauty-01.jpg</image:loc>
+      <image:title>Ruth — Beige Model Management Portfolio</image:title>
+    </image:image>
+  </url>
+
+  <!-- Client Booking -->
+  <url>
+    <loc>https://beigemodel.org/book/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Model Scouting & Application -->
+  <url>
+    <loc>https://beigemodel.org/apply/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- About Agency -->
+  <url>
+    <loc>https://beigemodel.org/about/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Capabilities & Services -->
+  <url>
+    <loc>https://beigemodel.org/services/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Editorial Journal -->
+  <url>
+    <loc>https://beigemodel.org/journal/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact & Agency HQ -->
+  <url>
+    <loc>https://beigemodel.org/contact/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal & Model Protection -->
+  <url>
+    <loc>https://beigemodel.org/legal/index.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

@@ -1,0 +1,6 @@
+# Beige Model Management Robots Configuration
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://beigemodel.org/sitemap.xml
