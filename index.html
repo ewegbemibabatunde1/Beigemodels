@@ -114,8 +114,8 @@
               <div class="hero-progress-fill" id="heroProgressFill"></div>
             </div>
             <div class="hero-arrow-btns">
-              <button class="hero-arrow-btn" id="heroPrevBtn" type="button" aria-label="Previous model photo">←</button>
-              <button class="hero-arrow-btn" id="heroNextBtn" type="button" aria-label="Next model photo">→</button>
+              <button class="hero-arrow-btn" id="heroPrevBtn" type="button" onclick="if(window.beigePrevSlide)window.beigePrevSlide()" aria-label="Previous model photo">←</button>
+              <button class="hero-arrow-btn" id="heroNextBtn" type="button" onclick="if(window.beigeNextSlide)window.beigeNextSlide()" aria-label="Next model photo">→</button>
             </div>
           </div>
         </div>
@@ -452,7 +452,7 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script type="module" src="js/main.js"></script>
+  <!-- Scripts (Standard Script Tag for Full Local file:// Compatibility) -->
+  <script src="js/main.js"></script>
 </body>
 </html>

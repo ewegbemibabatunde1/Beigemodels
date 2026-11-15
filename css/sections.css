@@ -21,6 +21,7 @@
   inset: 0;
   z-index: 1;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .hero-slide {
@@ -66,6 +67,8 @@
 
 .hero-copy {
   max-width: 620px;
+  position: relative;
+  z-index: 15;
 }
 
 .hero h1 {
@@ -100,6 +103,8 @@
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 36px;
+  position: relative;
+  z-index: 20;
 }
 
 /* 6-Second Carousel Controls & Live Progress Bar */
@@ -111,6 +116,9 @@
   padding-top: 20px;
   border-top: 1px solid var(--border-light-subtle);
   max-width: 480px;
+  position: relative;
+  z-index: 30;
+  pointer-events: auto;
 }
 
 .hero-counter {
@@ -142,25 +150,38 @@
 .hero-arrow-btns {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  position: relative;
+  z-index: 35;
+  pointer-events: auto;
 }
 
 .hero-arrow-btn {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(16, 16, 16, 0.7);
   border-radius: 50%;
   color: var(--color-white);
-  font-size: 13px;
-  transition: background-color var(--duration-fast) ease, border-color var(--duration-fast) ease, transform var(--duration-fast) ease;
+  font-size: 15px;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 40;
+  transition: background-color var(--duration-fast) ease, border-color var(--duration-fast) ease, transform var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
 }
 
 .hero-arrow-btn:hover {
   background-color: var(--color-raspberry);
   border-color: var(--color-raspberry);
-  transform: scale(1.08);
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(192, 48, 80, 0.4);
+}
+
+.hero-arrow-btn:active {
+  transform: scale(0.96);
 }
 
 /* Hero Bottom Bar */
@@ -177,6 +198,11 @@
   font-size: 9.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  pointer-events: none;
+}
+
+.hero-bottom * {
+  pointer-events: auto;
 }
 
 
