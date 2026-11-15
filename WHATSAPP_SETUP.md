@@ -1,7 +1,10 @@
-# WhatsApp booking setup
+# WhatsApp Configuration — Beige Model Management
 
-Before publishing, open `js/site-config.js` and set `whatsappNumber` to the agency's verified WhatsApp Business number in international format, digits only.
+The verified agency WhatsApp Business line has been configured:
+- **Phone:** `09077178197`
+- **International format:** `2349077178197`
+- **Click-to-chat URL:** `https://wa.me/2349077178197`
 
-Example format only: `2348012345678` (do not use this example as the agency's real number).
+Configuration is active in [`js/site-config.js`](./js/site-config.js).
 
-The booking form prepares the submitted brief in a WhatsApp chat. The visitor must press **Send** in WhatsApp. The site does not claim that a message was received until the visitor sends it; this static implementation does not provide a booking database or automated notification system.
+When visitors submit the booking inquiry on the homepage or click WhatsApp anywhere on the website, their message is automatically formatted and directed to this line.
