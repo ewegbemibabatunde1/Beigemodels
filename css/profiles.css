@@ -1,0 +1,38 @@
+/* Beige model directory and individual profile pages */
+.roster-page,.profile-page{background:var(--color-paper);color:var(--color-black);min-height:100vh}
+.roster-hero{padding:clamp(130px,16vw,210px) var(--page-pad) 54px;background:var(--color-black);color:#fff}
+.roster-hero h1,.profile-title{font-family:var(--font-serif);font-weight:400;text-transform:uppercase;line-height:.9;font-size:clamp(54px,8vw,112px);margin:18px 0}
+.roster-hero p{max-width:560px;color:#d6cfca;font:400 19px/1.55 var(--font-description)}
+.roster-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;padding:2px;background:#ddd5ce}
+.roster-card{position:relative;display:block;min-height:480px;overflow:hidden;background:#242424;color:#fff;text-decoration:none}
+.roster-card img{width:100%;height:100%;min-height:480px;object-fit:cover;transition:transform .8s var(--ease-editorial)}
+.roster-card:hover img{transform:scale(1.045)}
+.roster-card:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+.roster-card-meta{position:absolute;z-index:1;left:25px;right:25px;bottom:25px;display:flex;justify-content:space-between;align-items:end}
+.roster-card h2{font:400 34px/1 var(--font-serif);margin:0 0 8px}
+.roster-card p{font:500 9px/1.4 var(--font-sans);letter-spacing:.16em;text-transform:uppercase;color:#e5dcd5;margin:0}
+.profile-header{position:absolute;top:0;left:0;right:0;z-index:5;padding:22px var(--page-pad);display:flex;align-items:center;justify-content:space-between;color:#fff}
+.profile-header a{color:inherit;text-decoration:none;font:600 10px var(--font-sans);letter-spacing:.14em;text-transform:uppercase}
+.profile-hero{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);min-height:740px;background:var(--color-black);color:#fff}
+.profile-copy{padding:clamp(130px,16vw,210px) clamp(28px,7vw,110px) 70px;display:flex;flex-direction:column;justify-content:center}
+.profile-copy .eyebrow{color:#d58a9c}
+.profile-copy .profile-title{font-size:clamp(64px,8vw,116px)}
+.profile-category{font:600 10px/1.6 var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:#d7cbc4;margin:4px 0 24px}
+.profile-intro{font:400 21px/1.55 var(--font-description);color:#e7dfd9;max-width:450px}
+.profile-main-image{min-height:740px;max-height:900px;overflow:hidden}
+.profile-main-image img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.profile-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.profile-gallery{padding:85px var(--page-pad);background:var(--color-paper)}
+.profile-gallery h2{font:400 clamp(38px,5vw,64px)/.95 var(--font-serif);text-transform:uppercase;margin:0 0 30px}
+.profile-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.profile-gallery-grid figure{margin:0;overflow:hidden;background:#e3ddd7;aspect-ratio:4/5}
+.profile-gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease-editorial)}
+.profile-gallery-grid figure:hover img{transform:scale(1.035)}
+.profile-bottom{padding:65px var(--page-pad);background:#171717;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.profile-bottom h2{font:400 clamp(36px,5vw,62px)/.95 var(--font-serif);margin:0;text-transform:uppercase}
+.profile-bottom p{max-width:420px;color:#c9c0ba;font:400 18px/1.5 var(--font-description)}
+.profile-back{display:inline-flex;margin:28px var(--page-pad);color:#201d1b;text-decoration:none;font:600 10px var(--font-sans);letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:900px){.roster-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.profile-hero{grid-template-columns:1fr}.profile-copy{padding:135px var(--page-pad) 48px;order:2}.profile-main-image{min-height:65vh;max-height:760px;order:1}.profile-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.profile-bottom{align-items:flex-start;flex-direction:column}}
+@media(max-width:560px){.roster-grid{grid-template-columns:1fr}.roster-card,.roster-card img{min-height:440px}.profile-main-image{min-height:58vh}.profile-gallery{padding-top:58px;padding-bottom:58px}.profile-gallery-grid{gap:8px}.profile-bottom{padding-top:48px;padding-bottom:48px}}
+.booking-success-message.is-error{color:#ffb6bf;border-color:rgba(255,182,191,.35)}
+.roster-link{margin-top:12px}

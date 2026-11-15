@@ -409,3 +409,11 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Form feedback and configuration-safe hidden actions */
+.booking-success-message.is-error {
+  background: rgba(192, 48, 80, 0.12);
+  border-color: rgba(255, 182, 191, 0.35);
+  color: #ffb6bf;
+}
+[hidden] { display: none !important; }
