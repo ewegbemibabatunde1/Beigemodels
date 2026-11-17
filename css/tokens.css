@@ -1,53 +1,69 @@
 /**
- * BEIGE MODEL MANAGEMENT — DESIGN TOKENS
- * Brand Concept: The Art of Representation
- * Palette: Midnight Black (#101010), Raspberry Rose (#C03050), Ivory (#F7F4F1), Paper (#EEE9E4), Warm Stone (#B7A99B)
+ * BEIGE MODELS — OFFICIAL LUXURY DESIGN SYSTEM TOKENS
+ * Benchmark: Apple (Simplicity & Precision) + Chanel / Saint Laurent / The Row / Loewe / Jacquemus
+ * Exact Official Brand Colour System & Typography System
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
 :root {
-  /* Surfaces & Dark Tones */
-  --color-black: #101010;
-  --color-black-elevated: #161616;
-  --color-black-card: #1c1c1c;
-  --color-black-deep: #090909;
+  /* ==========================================================================
+     Official Brand Colours (Non-negotiable)
+     ========================================================================== */
+  --primary-pink: #E71469;
+  --secondary-pink: #F64D9C;
+  --deep-pink: #B2073E;
 
-  /* Paper & Light Tones */
-  --color-ivory: #f7f4f1;
-  --color-paper: #eee9e4;
-  --color-paper-dark: #dfd9d2;
-  --color-stone: #b7a99b;
-  --color-muted: #9e9791;
-  --color-white: #ffffff;
+  /* Background Colours */
+  --background-main: #FCF5F7;
+  --background-white: #FFFFFF;
+  --background-blush: #F7DCE5;
 
-  /* Brand Accents */
-  --color-raspberry: #c03050;
-  --color-fuchsia: #e02070;
-  --color-raspberry-subtle: rgba(192, 48, 80, 0.14);
-  --color-raspberry-glow: rgba(192, 48, 80, 0.35);
+  /* Typography Colours */
+  --text-primary: #0B0808;
+  --text-secondary: #635252;
+  --text-muted: #8E7C7C;
+  --text-light: #FFFFFF;
 
-  /* Lines & Borders */
-  --border-light: rgba(255, 255, 255, 0.14);
-  --border-light-subtle: rgba(255, 255, 255, 0.08);
-  --border-dark: rgba(16, 16, 16, 0.14);
-  --border-dark-subtle: rgba(16, 16, 16, 0.08);
-  --border-accent: rgba(192, 48, 80, 0.45);
+  /* UI Elements */
+  --button-primary: #E71469;
+  --button-hover: #B2073E;
+  --border-light: #F4BDC2;
+  --border-subtle: rgba(231, 20, 105, 0.16);
+  --border-dark: rgba(11, 8, 8, 0.12);
 
-  /* Distinctive Luxury Typography Stacks */
-  --font-serif: "Italiana", "Cormorant Garamond", "Times New Roman", serif;
-  --font-description: "Cormorant Garamond", "Playfair Display", Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Compatibility Aliases for Design System */
+  --color-raspberry: var(--primary-pink);
+  --color-fuchsia: var(--secondary-pink);
+  --color-black: var(--text-primary);
+  --color-paper: var(--background-main);
+  --color-ivory: var(--background-blush);
+  --color-white: var(--background-white);
+  --color-stone: var(--border-light);
+  --color-muted: var(--text-secondary);
 
-  /* Typography Scales */
-  --text-hero: clamp(52px, 8.2vw, 126px);
-  --text-h1: clamp(40px, 5.6vw, 76px);
-  --text-h2: clamp(28px, 4vw, 52px);
-  --text-h3: clamp(20px, 2.5vw, 32px);
-  --text-body: 14.5px;
-  --text-description: 20px;
-  --text-eyebrow: 10px;
-  --text-btn: 10px;
+  /* ==========================================================================
+     Official Typography System
+     ========================================================================== */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  /* Spacing Scale */
+  /* Aliases */
+  --font-serif: var(--font-heading);
+  --font-sans: var(--font-body);
+  --font-description: var(--font-body);
+
+  /* Responsive Typography Scales */
+  --text-hero: clamp(44px, 7.2vw, 104px);
+  --text-h1: clamp(36px, 5.2vw, 68px);
+  --text-h2: clamp(26px, 3.6vw, 44px);
+  --text-h3: clamp(20px, 2.2vw, 28px);
+  --text-body: 15px;
+  --text-description: 18px;
+  --text-eyebrow: 10.5px;
+  --text-btn: 11px;
+
+  /* Spacing Scale (Apple-grade rhythm) */
   --space-2xs: 4px;
   --space-xs: 8px;
   --space-sm: 14px;
@@ -56,7 +72,7 @@
   --space-xl: 56px;
   --space-2xl: 84px;
   --space-3xl: 120px;
-  --page-pad: clamp(20px, 5.2vw, 84px);
+  --page-pad: clamp(20px, 5vw, 80px);
 
   /* Timing & Motion */
   --ease-editorial: cubic-bezier(0.19, 1, 0.22, 1);
@@ -64,8 +80,9 @@
   --duration-medium: 400ms;
   --duration-slow: 750ms;
 
-  /* Elevation Shadows */
-  --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 14px 40px rgba(192, 48, 80, 0.25);
-  --shadow-card: 0 20px 48px rgba(0, 0, 0, 0.6);
+  /* Elevation & Shadows */
+  --shadow-subtle: 0 4px 20px rgba(11, 8, 8, 0.04);
+  --shadow-card: 0 10px 30px rgba(231, 20, 105, 0.08);
+  --shadow-glow: 0 8px 24px rgba(231, 20, 105, 0.28);
+  --shadow-dark: 0 20px 48px rgba(0, 0, 0, 0.45);
 }

@@ -1,5 +1,7 @@
 /**
- * BEIGE MODEL MANAGEMENT — BASE & RESET
+ * BEIGE MODELS — BASE & RESET
+ * Typography: Playfair Display (Headlines) & Manrope (Body, UI, Nav, Buttons)
+ * Surfaces: Main Background #FCF5F7, Text #0B0808 / #635252
  */
 
 *, *::before, *::after {
@@ -15,12 +17,12 @@ html {
 }
 
 body {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  font-family: var(--font-sans);
+  background-color: var(--background-main);
+  color: var(--text-primary);
+  font-family: var(--font-body);
   font-size: var(--text-body);
-  line-height: 1.8;
-  letter-spacing: 0.015em;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -29,6 +31,18 @@ body {
 
 body.menu-open {
   overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .model-name {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+button, nav, .navigation, .main-nav {
+  font-family: var(--font-body);
+  font-weight: 600;
 }
 
 a {
@@ -53,7 +67,7 @@ img, picture, video {
 
 /* Accessibility Focus States */
 :focus-visible {
-  outline: 2px solid var(--color-fuchsia);
+  outline: 2px solid var(--primary-pink);
   outline-offset: 3px;
 }
 
@@ -72,39 +86,42 @@ img, picture, video {
 
 /* Typography Utility Classes */
 .serif {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-weight: 400;
 }
 
 .description-style {
-  font-family: var(--font-description);
+  font-family: var(--font-body);
   font-size: var(--text-description);
   line-height: 1.65;
-  letter-spacing: 0.015em;
-  color: #ebe4dd;
+  color: var(--text-secondary);
 }
 
 .accent {
-  color: var(--color-raspberry);
+  color: var(--primary-pink);
   font-style: italic;
+}
+
+.accent-secondary {
+  color: var(--secondary-pink);
 }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  color: var(--color-raspberry);
-  font-family: var(--font-sans);
+  color: var(--primary-pink);
+  font-family: var(--font-body);
   font-size: var(--text-eyebrow);
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
 .eyebrow::before {
   content: "";
-  width: 26px;
-  height: 1px;
+  width: 24px;
+  height: 1.5px;
   background-color: currentColor;
 }
 
@@ -117,26 +134,26 @@ img, picture, video {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
 .scroll-cue::before {
   content: "";
-  width: 36px;
-  height: 1px;
-  background-color: var(--color-raspberry);
+  width: 32px;
+  height: 1.5px;
+  background-color: var(--primary-pink);
 }
 
 /* Cursor Ambient Glow (Desktop Pointer Only) */
 .cursor-glow {
   position: fixed;
   z-index: 1;
-  width: 320px;
-  height: 320px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   pointer-events: none;
-  background: radial-gradient(circle, rgba(192, 48, 80, 0.08), transparent 70%);
+  background: radial-gradient(circle, rgba(231, 20, 105, 0.08), transparent 70%);
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity var(--duration-medium) ease;

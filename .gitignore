@@ -32,6 +32,9 @@ ehthumbs.db
 Thumbs.db
 [Dd]esktop.ini
 
+# Scratch & Temporary Analysis
+scratch/
+
 # Editor & IDE Directories
 .idea/
 .vscode/

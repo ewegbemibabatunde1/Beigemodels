@@ -202,6 +202,72 @@
     });
   }
 
+  function initTestimonialTabs() {
+    const tabs = document.querySelectorAll('.testimonial-tab-btn');
+    const panes = document.querySelectorAll('.testimonials-pane');
+    if (!tabs.length || !panes.length) return;
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab');
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        panes.forEach(pane => {
+          if (pane.getAttribute('data-pane') === target) {
+            pane.classList.add('active');
+            pane.hidden = false;
+          } else {
+            pane.classList.remove('active');
+            pane.hidden = true;
+          }
+        });
+      });
+    });
+  }
+
+  function initTalentChips() {
+    const chips = document.querySelectorAll('.talent-chip');
+    const input = document.getElementById('requestedModel');
+    if (!chips.length || !input) return;
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chip.classList.toggle('selected');
+        const selected = Array.from(document.querySelectorAll('.talent-chip.selected'))
+          .map(c => c.getAttribute('data-talent') || c.textContent.trim());
+        input.value = selected.join(', ');
+      });
+    });
+  }
+
+  function initModelFilters() {
+    const buttons = document.querySelectorAll('.talent-filter-btn');
+    const cards = document.querySelectorAll('.talent-grid .talent-card');
+    if (!buttons.length || !cards.length) return;
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = (btn.getAttribute('data-filter') || 'all').toLowerCase();
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        cards.forEach(card => {
+          const category = (card.getAttribute('data-category') || '').toLowerCase();
+          if (filter === 'all' || category.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
   function initYear() {
     const year = document.getElementById('currentYear');
     if (year) year.textContent = new Date().getFullYear();
@@ -214,6 +280,9 @@
     initPointerEffects();
     initWhatsAppLinks();
     initBookingForm();
+    initTestimonialTabs();
+    initTalentChips();
+    initModelFilters();
     initYear();
   }
 
