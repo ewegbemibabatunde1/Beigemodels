@@ -231,14 +231,14 @@
   }
 
   function initTalentChips() {
-    const chips = document.querySelectorAll('.talent-chip');
+    const chips = document.querySelectorAll('.talent-chip, .talent-chip-btn');
     const input = document.getElementById('requestedModel');
     if (!chips.length || !input) return;
 
     chips.forEach(chip => {
       chip.addEventListener('click', () => {
         chip.classList.toggle('selected');
-        const selected = Array.from(document.querySelectorAll('.talent-chip.selected'))
+        const selected = Array.from(document.querySelectorAll('.talent-chip.selected, .talent-chip-btn.selected'))
           .map(c => c.getAttribute('data-talent') || c.textContent.trim());
         input.value = selected.join(', ');
       });

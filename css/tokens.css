@@ -1,88 +1,135 @@
 /**
  * BEIGE MODELS — OFFICIAL LUXURY DESIGN SYSTEM TOKENS
- * Benchmark: Apple (Simplicity & Precision) + Chanel / Saint Laurent / The Row / Loewe / Jacquemus
- * Exact Official Brand Colour System & Typography System
+ * Design Reference: Modern Editorial Luxury (Image 2 Inspired)
+ * 
+ * Official Beige Brand Colour Palette:
+ * - Champagne Beige: #E8DDCE
+ * - Warm Ivory:      #F5F0E8
+ * - Classic Taupe:    #C6B49F
+ * - Mocha Beige:     #A58B72
+ * - Espresso:        #25201D
+ * - Soft Blush:      #D99AA5
+ * - Pure White:      #FFFFFF
+ * 
+ * Typography System:
+ * - Primary Font: Manrope (Weights: 400, 500, 600, 700, 800)
+ * - Editorial Accent Font: Cormorant Garamond (Weights: 400, 500, 600, 700, Italic)
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
   /* ==========================================================================
-     Official Brand Colours (Non-negotiable)
+     Official Brand Colors
      ========================================================================== */
-  --primary-pink: #E71469;
-  --secondary-pink: #F64D9C;
-  --deep-pink: #B2073E;
+  --champagne-beige: #E8DDCE;
+  --warm-ivory:      #F5F0E8;
+  --classic-taupe:   #C6B49F;
+  --mocha-beige:     #A58B72;
+  --espresso:        #25201D;
+  --soft-blush:      #D99AA5;
+  --pure-white:      #FFFFFF;
 
-  /* Background Colours */
-  --background-main: #FCF5F7;
-  --background-white: #FFFFFF;
-  --background-blush: #F7DCE5;
+  /* Surfaces & Backgrounds */
+  --bg-main:         var(--warm-ivory);
+  --bg-surface:      var(--pure-white);
+  --bg-alt:          var(--champagne-beige);
+  --bg-dark:         var(--espresso);
+  --bg-card:         var(--pure-white);
 
-  /* Typography Colours */
-  --text-primary: #0B0808;
-  --text-secondary: #635252;
-  --text-muted: #8E7C7C;
-  --text-light: #FFFFFF;
+  /* Typography Colors */
+  --text-primary:    var(--espresso);
+  --text-secondary:  #5A504B;
+  --text-muted:      #857870;
+  --text-light:      var(--pure-white);
+  --text-champagne:  var(--champagne-beige);
 
-  /* UI Elements */
-  --button-primary: #E71469;
-  --button-hover: #B2073E;
-  --border-light: #F4BDC2;
-  --border-subtle: rgba(231, 20, 105, 0.16);
-  --border-dark: rgba(11, 8, 8, 0.12);
+  /* Interactive & UI Elements */
+  --btn-primary-bg:    var(--espresso);
+  --btn-primary-text:  var(--pure-white);
+  --btn-primary-hover: var(--mocha-beige);
 
-  /* Compatibility Aliases for Design System */
-  --color-raspberry: var(--primary-pink);
-  --color-fuchsia: var(--secondary-pink);
-  --color-black: var(--text-primary);
-  --color-paper: var(--background-main);
-  --color-ivory: var(--background-blush);
-  --color-white: var(--background-white);
-  --color-stone: var(--border-light);
-  --color-muted: var(--text-secondary);
+  --btn-accent-bg:     var(--soft-blush);
+  --btn-accent-text:   var(--espresso);
+  --btn-accent-hover:  var(--mocha-beige);
+
+  --border-subtle:     rgba(37, 32, 29, 0.1);
+  --border-light:      rgba(198, 180, 159, 0.35);
+  --border-beige:      var(--classic-taupe);
+  --border-dark:       rgba(255, 255, 255, 0.16);
 
   /* ==========================================================================
      Official Typography System
      ========================================================================== */
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-primary:      'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-editorial:    'Cormorant Garamond', Georgia, serif;
 
-  /* Aliases */
-  --font-serif: var(--font-heading);
-  --font-sans: var(--font-body);
-  --font-description: var(--font-body);
+  /* Typography Scales — Desktop Defaults */
+  --text-hero:         clamp(44px, 5.8vw, 84px);
+  --text-h1:           clamp(36px, 4.4vw, 56px);
+  --text-h2:           clamp(28px, 3.2vw, 42px);
+  --text-h3:           clamp(20px, 2.2vw, 28px);
+  --text-body:         17px;
+  --text-body-sm:      15px;
+  --text-eyebrow:      12px;
+  --text-btn:          14px;
 
-  /* Responsive Typography Scales */
-  --text-hero: clamp(44px, 7.2vw, 104px);
-  --text-h1: clamp(36px, 5.2vw, 68px);
-  --text-h2: clamp(26px, 3.6vw, 44px);
-  --text-h3: clamp(20px, 2.2vw, 28px);
-  --text-body: 15px;
-  --text-description: 18px;
-  --text-eyebrow: 10.5px;
-  --text-btn: 11px;
+  /* Typography Weights */
+  --weight-hero:       800;
+  --weight-h1:         700;
+  --weight-h2:         700;
+  --weight-editorial:  600;
+  --weight-nav:        600;
+  --weight-btn:        700;
+  --weight-body:       500;
+  --weight-label:      600;
 
-  /* Spacing Scale (Apple-grade rhythm) */
+  /* Spacing Scale */
   --space-2xs: 4px;
-  --space-xs: 8px;
-  --space-sm: 14px;
-  --space-md: 22px;
-  --space-lg: 36px;
-  --space-xl: 56px;
-  --space-2xl: 84px;
-  --space-3xl: 120px;
-  --page-pad: clamp(20px, 5vw, 80px);
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  40px;
+  --space-xl:  64px;
+  --space-2xl: 96px;
+  --space-3xl: 140px;
+  --page-pad:  clamp(24px, 5vw, 88px);
 
   /* Timing & Motion */
-  --ease-editorial: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-fast: 220ms;
   --duration-medium: 400ms;
-  --duration-slow: 750ms;
+  --duration-slow: 700ms;
 
   /* Elevation & Shadows */
-  --shadow-subtle: 0 4px 20px rgba(11, 8, 8, 0.04);
-  --shadow-card: 0 10px 30px rgba(231, 20, 105, 0.08);
-  --shadow-glow: 0 8px 24px rgba(231, 20, 105, 0.28);
-  --shadow-dark: 0 20px 48px rgba(0, 0, 0, 0.45);
+  --shadow-subtle: 0 4px 20px rgba(37, 32, 29, 0.05);
+  --shadow-card:   0 12px 36px rgba(37, 32, 29, 0.08);
+  --shadow-float:  0 20px 48px rgba(37, 32, 29, 0.12);
+  --shadow-dark:   0 24px 60px rgba(0, 0, 0, 0.45);
+
+  /* ==========================================================================
+     Backward-Compatibility Aliases
+     ========================================================================== */
+  --font-heading:      var(--font-primary);
+  --font-body:         var(--font-primary);
+  --font-serif:        var(--font-editorial);
+  --font-sans:         var(--font-primary);
+  --font-description:  var(--font-primary);
+
+  --primary-pink:      var(--espresso);
+  --secondary-pink:    var(--mocha-beige);
+  --deep-pink:         var(--espresso);
+  --background-main:   var(--warm-ivory);
+  --background-white:  var(--pure-white);
+  --background-blush:  var(--champagne-beige);
+  --color-raspberry:   var(--espresso);
+  --color-fuchsia:     var(--mocha-beige);
+  --color-black:       var(--espresso);
+  --color-paper:       var(--warm-ivory);
+  --color-ivory:       var(--warm-ivory);
+  --color-white:       var(--pure-white);
+  --color-stone:       var(--classic-taupe);
+  --color-muted:       var(--text-secondary);
+  --button-primary:    var(--btn-primary-bg);
+  --button-hover:      var(--btn-primary-hover);
 }
